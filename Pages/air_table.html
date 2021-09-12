@@ -1,0 +1,5875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fire Analysis Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">  
+</head>
+<body>
+    <table border="1" class="dataframe">
+        <thead>
+            <tr style="text-align: right;">
+            <th></th>
+            <th>state_code</th>
+            <th>county_code</th>
+            <th>site_num</th>
+            <th>parameter_code</th>
+            <th>poc</th>
+            <th>latitude</th>
+            <th>longitude</th>
+            <th>datum</th>
+            <th>parameter_name</th>
+            <th>sample_duration</th>
+            <th>pollutant_standard</th>
+            <th>metric_used</th>
+            <th>method_name</th>
+            <th>year</th>
+            <th>units_of_measure</th>
+            <th>event_type</th>
+            <th>observation_count</th>
+            <th>observation_percent</th>
+            <th>completeness_indicator</th>
+            <th>valid_day_count</th>
+            <th>required_day_count</th>
+            <th>exceptional_data_count</th>
+            <th>null_data_count</th>
+            <th>primary_exceedance_count</th>
+            <th>secondary_exceedance_count</th>
+            <th>certification_indicator</th>
+            <th>num_obs_below_mdl</th>
+            <th>arithmetic_mean</th>
+            <th>arithmetic_standard_dev</th>
+            <th>first_max_value</th>
+            <th>first_max_datetime</th>
+            <th>second_max_value</th>
+            <th>second_max_datetime</th>
+            <th>third_max_value</th>
+            <th>third_max_datetime</th>
+            <th>fourth_max_value</th>
+            <th>fourth_max_datetime</th>
+            <th>first_max_non_overlapping_value</th>
+            <th>first_no_max_datetime</th>
+            <th>second_max_non_overlapping_value</th>
+            <th>second_no_max_datetime</th>
+            <th>ninety_nine_percentile</th>
+            <th>ninety_eight_percentile</th>
+            <th>ninety_five_percentile</th>
+            <th>ninety_percentile</th>
+            <th>seventy_five_percentile</th>
+            <th>fifty_percentile</th>
+            <th>ten_percentile</th>
+            <th>local_site_name</th>
+            <th>address</th>
+            <th>state_name</th>
+            <th>county_name</th>
+            <th>city_name</th>
+            <th>cbsa_name</th>
+            <th>date_of_last_change</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <th>0</th>
+            <td>6</td>
+            <td>27</td>
+            <td>20</td>
+            <td>61104</td>
+            <td>1</td>
+            <td>36.057185</td>
+            <td>-117.861369</td>
+            <td>NAD83</td>
+            <td>Wind Direction - Resultant</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - VECTOR SUMMATION</td>
+            <td>2019</td>
+            <td>Degrees Compass</td>
+            <td>No Events</td>
+            <td>8748</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>365</td>
+            <td>365</td>
+            <td>0</td>
+            <td>12</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>161.689449</td>
+            <td>96.641771</td>
+            <td>360.000</td>
+            <td>2019-01-23 17:00:00+00:00</td>
+            <td>360.000</td>
+            <td>2019-04-22 09:00:00+00:00</td>
+            <td>359.900</td>
+            <td>2019-02-16 02:00:00+00:00</td>
+            <td>359.900</td>
+            <td>2019-11-04 05:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>357.800</td>
+            <td>356.100</td>
+            <td>346.900</td>
+            <td>323.200</td>
+            <td>227.900</td>
+            <td>132.900</td>
+            <td>33.000</td>
+            <td>Coso Gate</td>
+            <td>COSO GATE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>NaN</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>1</th>
+            <td>6</td>
+            <td>27</td>
+            <td>20</td>
+            <td>61101</td>
+            <td>1</td>
+            <td>36.057185</td>
+            <td>-117.861369</td>
+            <td>NAD83</td>
+            <td>Wind Speed - Scalar</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ELECTRONIC OR MACHINE AVG.</td>
+            <td>1999</td>
+            <td>Knots</td>
+            <td>No Events</td>
+            <td>8744</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>364</td>
+            <td>365</td>
+            <td>0</td>
+            <td>16</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>8.929094</td>
+            <td>5.814807</td>
+            <td>38.800</td>
+            <td>1999-04-04 00:00:00+00:00</td>
+            <td>37.100</td>
+            <td>1999-04-04 01:00:00+00:00</td>
+            <td>36.900</td>
+            <td>1999-04-22 12:00:00+00:00</td>
+            <td>36.700</td>
+            <td>1999-04-04 02:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>26.600</td>
+            <td>23.500</td>
+            <td>19.400</td>
+            <td>16.500</td>
+            <td>12.600</td>
+            <td>8.000</td>
+            <td>2.300</td>
+            <td>Coso Gate</td>
+            <td>COSO GATE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>NaN</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>2</th>
+            <td>6</td>
+            <td>27</td>
+            <td>20</td>
+            <td>62201</td>
+            <td>1</td>
+            <td>36.057185</td>
+            <td>-117.861369</td>
+            <td>NAD83</td>
+            <td>Relative Humidity</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - COMPUTED(INDIRECT)</td>
+            <td>1999</td>
+            <td>Percent relative humidity</td>
+            <td>No Events</td>
+            <td>8755</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>365</td>
+            <td>365</td>
+            <td>0</td>
+            <td>5</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>29.532381</td>
+            <td>17.262424</td>
+            <td>100.000</td>
+            <td>1999-01-24 19:00:00+00:00</td>
+            <td>100.000</td>
+            <td>1999-01-24 20:00:00+00:00</td>
+            <td>100.000</td>
+            <td>1999-01-24 21:00:00+00:00</td>
+            <td>100.000</td>
+            <td>1999-01-24 22:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>96.000</td>
+            <td>86.000</td>
+            <td>66.000</td>
+            <td>51.000</td>
+            <td>35.000</td>
+            <td>25.000</td>
+            <td>14.000</td>
+            <td>Coso Gate</td>
+            <td>COSO GATE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>NaN</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>3</th>
+            <td>6</td>
+            <td>27</td>
+            <td>20</td>
+            <td>61106</td>
+            <td>1</td>
+            <td>36.057185</td>
+            <td>-117.861369</td>
+            <td>NAD83</td>
+            <td>Std Dev Hz Wind Direction</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ARITHMETIC STANDARD DEVIATION</td>
+            <td>2018</td>
+            <td>Degrees Compass</td>
+            <td>No Events</td>
+            <td>8756</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>365</td>
+            <td>365</td>
+            <td>0</td>
+            <td>4</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>24.100137</td>
+            <td>16.569915</td>
+            <td>79.300</td>
+            <td>2018-07-01 10:00:00+00:00</td>
+            <td>79.100</td>
+            <td>2018-05-31 19:00:00+00:00</td>
+            <td>78.900</td>
+            <td>2018-12-02 07:00:00+00:00</td>
+            <td>78.500</td>
+            <td>2018-12-30 08:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>70.900</td>
+            <td>67.200</td>
+            <td>59.600</td>
+            <td>50.600</td>
+            <td>32.900</td>
+            <td>18.100</td>
+            <td>8.000</td>
+            <td>Coso Gate</td>
+            <td>COSO GATE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>NaN</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>4</th>
+            <td>6</td>
+            <td>27</td>
+            <td>20</td>
+            <td>61106</td>
+            <td>1</td>
+            <td>36.057185</td>
+            <td>-117.861369</td>
+            <td>NAD83</td>
+            <td>Std Dev Hz Wind Direction</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ARITHMETIC STANDARD DEVIATION</td>
+            <td>2019</td>
+            <td>Degrees Compass</td>
+            <td>No Events</td>
+            <td>8748</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>365</td>
+            <td>365</td>
+            <td>0</td>
+            <td>12</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>23.739106</td>
+            <td>16.333843</td>
+            <td>80.500</td>
+            <td>2019-06-16 03:00:00+00:00</td>
+            <td>78.900</td>
+            <td>2019-03-02 14:00:00+00:00</td>
+            <td>78.900</td>
+            <td>2019-12-16 13:00:00+00:00</td>
+            <td>78.200</td>
+            <td>2019-11-08 19:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>71.100</td>
+            <td>68.000</td>
+            <td>59.800</td>
+            <td>49.300</td>
+            <td>31.800</td>
+            <td>17.700</td>
+            <td>8.100</td>
+            <td>Coso Gate</td>
+            <td>COSO GATE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>NaN</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>5</th>
+            <td>6</td>
+            <td>27</td>
+            <td>20</td>
+            <td>62201</td>
+            <td>1</td>
+            <td>36.057185</td>
+            <td>-117.861369</td>
+            <td>NAD83</td>
+            <td>Relative Humidity</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - COMPUTED(INDIRECT)</td>
+            <td>2013</td>
+            <td>Percent relative humidity</td>
+            <td>No Events</td>
+            <td>8733</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>364</td>
+            <td>365</td>
+            <td>0</td>
+            <td>27</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>28.192946</td>
+            <td>16.280874</td>
+            <td>100.000</td>
+            <td>2013-01-24 03:00:00+00:00</td>
+            <td>100.000</td>
+            <td>2013-01-24 04:00:00+00:00</td>
+            <td>100.000</td>
+            <td>2013-01-24 09:00:00+00:00</td>
+            <td>100.000</td>
+            <td>2013-01-24 10:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>90.000</td>
+            <td>78.000</td>
+            <td>62.000</td>
+            <td>50.000</td>
+            <td>34.000</td>
+            <td>24.000</td>
+            <td>13.000</td>
+            <td>Coso Gate</td>
+            <td>COSO GATE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>NaN</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>6</th>
+            <td>6</td>
+            <td>27</td>
+            <td>20</td>
+            <td>61103</td>
+            <td>1</td>
+            <td>36.057185</td>
+            <td>-117.861369</td>
+            <td>NAD83</td>
+            <td>Wind Speed - Resultant</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - VECTOR SUMMATION</td>
+            <td>2017</td>
+            <td>Knots</td>
+            <td>No Events</td>
+            <td>8751</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>365</td>
+            <td>365</td>
+            <td>0</td>
+            <td>9</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>8.175843</td>
+            <td>6.054626</td>
+            <td>44.300</td>
+            <td>2017-03-31 03:00:00+00:00</td>
+            <td>38.600</td>
+            <td>2017-12-16 19:00:00+00:00</td>
+            <td>37.200</td>
+            <td>2017-03-31 02:00:00+00:00</td>
+            <td>36.700</td>
+            <td>2017-12-16 20:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>25.300</td>
+            <td>22.900</td>
+            <td>19.300</td>
+            <td>16.600</td>
+            <td>12.000</td>
+            <td>7.100</td>
+            <td>1.300</td>
+            <td>Coso Gate</td>
+            <td>COSO GATE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>NaN</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>7</th>
+            <td>6</td>
+            <td>27</td>
+            <td>20</td>
+            <td>62101</td>
+            <td>1</td>
+            <td>36.057185</td>
+            <td>-117.861369</td>
+            <td>NAD83</td>
+            <td>Outdoor Temperature</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ELECTRONIC OR MACHINE AVG.</td>
+            <td>2015</td>
+            <td>Degrees Fahrenheit</td>
+            <td>No Events</td>
+            <td>8536</td>
+            <td>97.0</td>
+            <td>Y</td>
+            <td>355</td>
+            <td>365</td>
+            <td>0</td>
+            <td>224</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>63.598407</td>
+            <td>15.140805</td>
+            <td>100.000</td>
+            <td>2015-06-20 16:00:00+00:00</td>
+            <td>99.000</td>
+            <td>2015-06-19 17:00:00+00:00</td>
+            <td>99.000</td>
+            <td>2015-06-20 15:00:00+00:00</td>
+            <td>99.000</td>
+            <td>2015-06-20 17:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>93.000</td>
+            <td>91.000</td>
+            <td>88.000</td>
+            <td>84.000</td>
+            <td>76.000</td>
+            <td>63.000</td>
+            <td>43.000</td>
+            <td>Coso Gate</td>
+            <td>COSO GATE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>NaN</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>8</th>
+            <td>6</td>
+            <td>27</td>
+            <td>20</td>
+            <td>61104</td>
+            <td>1</td>
+            <td>36.057185</td>
+            <td>-117.861369</td>
+            <td>NAD83</td>
+            <td>Wind Direction - Resultant</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - VECTOR SUMMATION</td>
+            <td>2016</td>
+            <td>Degrees Compass</td>
+            <td>No Events</td>
+            <td>8774</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>366</td>
+            <td>366</td>
+            <td>0</td>
+            <td>10</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>157.607556</td>
+            <td>91.187234</td>
+            <td>360.000</td>
+            <td>2016-02-15 22:00:00+00:00</td>
+            <td>360.000</td>
+            <td>2016-11-02 19:00:00+00:00</td>
+            <td>359.900</td>
+            <td>2016-02-15 14:00:00+00:00</td>
+            <td>359.900</td>
+            <td>2016-04-25 21:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>357.800</td>
+            <td>355.400</td>
+            <td>342.400</td>
+            <td>309.300</td>
+            <td>208.100</td>
+            <td>131.500</td>
+            <td>54.100</td>
+            <td>Coso Gate</td>
+            <td>COSO GATE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>NaN</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>9</th>
+            <td>6</td>
+            <td>27</td>
+            <td>20</td>
+            <td>42402</td>
+            <td>1</td>
+            <td>36.057185</td>
+            <td>-117.861369</td>
+            <td>NAD83</td>
+            <td>Hydrogen sulfide</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - PULSED FLUORESCENT</td>
+            <td>2000</td>
+            <td>Parts per million</td>
+            <td>No Events</td>
+            <td>8577</td>
+            <td>98.0</td>
+            <td>Y</td>
+            <td>359</td>
+            <td>366</td>
+            <td>0</td>
+            <td>207</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>0.000366</td>
+            <td>0.000564</td>
+            <td>0.007</td>
+            <td>2000-07-16 04:00:00+00:00</td>
+            <td>0.006</td>
+            <td>2000-05-08 04:00:00+00:00</td>
+            <td>0.004</td>
+            <td>2000-01-14 03:00:00+00:00</td>
+            <td>0.004</td>
+            <td>2000-02-01 18:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>0.002</td>
+            <td>0.002</td>
+            <td>0.001</td>
+            <td>0.001</td>
+            <td>0.001</td>
+            <td>0.000</td>
+            <td>0.000</td>
+            <td>Coso Gate</td>
+            <td>COSO GATE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>NaN</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>10</th>
+            <td>6</td>
+            <td>27</td>
+            <td>20</td>
+            <td>61102</td>
+            <td>1</td>
+            <td>36.057185</td>
+            <td>-117.861369</td>
+            <td>NAD83</td>
+            <td>Wind Direction - Scalar</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ELECTRONIC OR MACHINE AVERAGE</td>
+            <td>2015</td>
+            <td>Degrees Compass</td>
+            <td>No Events</td>
+            <td>8734</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>364</td>
+            <td>365</td>
+            <td>0</td>
+            <td>26</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>158.118273</td>
+            <td>94.207875</td>
+            <td>360.000</td>
+            <td>2015-01-08 02:00:00+00:00</td>
+            <td>360.000</td>
+            <td>2015-01-13 18:00:00+00:00</td>
+            <td>360.000</td>
+            <td>2015-01-22 01:00:00+00:00</td>
+            <td>360.000</td>
+            <td>2015-01-25 12:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>358.000</td>
+            <td>356.000</td>
+            <td>345.000</td>
+            <td>319.000</td>
+            <td>212.000</td>
+            <td>132.000</td>
+            <td>33.000</td>
+            <td>Coso Gate</td>
+            <td>COSO GATE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>NaN</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>11</th>
+            <td>6</td>
+            <td>27</td>
+            <td>20</td>
+            <td>61103</td>
+            <td>1</td>
+            <td>36.057185</td>
+            <td>-117.861369</td>
+            <td>NAD83</td>
+            <td>Wind Speed - Resultant</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - VECTOR SUMMATION</td>
+            <td>2019</td>
+            <td>Knots</td>
+            <td>No Events</td>
+            <td>8748</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>365</td>
+            <td>365</td>
+            <td>0</td>
+            <td>12</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>8.074154</td>
+            <td>6.087192</td>
+            <td>37.500</td>
+            <td>2019-01-21 20:00:00+00:00</td>
+            <td>36.600</td>
+            <td>2019-01-21 21:00:00+00:00</td>
+            <td>34.200</td>
+            <td>2019-10-27 15:00:00+00:00</td>
+            <td>33.900</td>
+            <td>2019-04-09 20:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>26.800</td>
+            <td>23.400</td>
+            <td>19.400</td>
+            <td>16.200</td>
+            <td>11.900</td>
+            <td>6.800</td>
+            <td>1.300</td>
+            <td>Coso Gate</td>
+            <td>COSO GATE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>NaN</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>12</th>
+            <td>6</td>
+            <td>27</td>
+            <td>20</td>
+            <td>61101</td>
+            <td>1</td>
+            <td>36.057185</td>
+            <td>-117.861369</td>
+            <td>NAD83</td>
+            <td>Wind Speed - Scalar</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ELECTRONIC OR MACHINE AVG.</td>
+            <td>2014</td>
+            <td>Knots</td>
+            <td>No Events</td>
+            <td>8740</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>364</td>
+            <td>365</td>
+            <td>0</td>
+            <td>20</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>8.829462</td>
+            <td>5.816895</td>
+            <td>45.000</td>
+            <td>2014-12-31 08:00:00+00:00</td>
+            <td>44.000</td>
+            <td>2014-12-31 03:00:00+00:00</td>
+            <td>43.800</td>
+            <td>2014-12-31 04:00:00+00:00</td>
+            <td>43.500</td>
+            <td>2014-12-31 07:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>25.900</td>
+            <td>23.100</td>
+            <td>19.200</td>
+            <td>16.400</td>
+            <td>12.500</td>
+            <td>7.800</td>
+            <td>2.300</td>
+            <td>Coso Gate</td>
+            <td>COSO GATE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>NaN</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>13</th>
+            <td>6</td>
+            <td>27</td>
+            <td>20</td>
+            <td>62201</td>
+            <td>1</td>
+            <td>36.057185</td>
+            <td>-117.861369</td>
+            <td>NAD83</td>
+            <td>Relative Humidity</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - COMPUTED(INDIRECT)</td>
+            <td>2009</td>
+            <td>Percent relative humidity</td>
+            <td>No Events</td>
+            <td>8641</td>
+            <td>99.0</td>
+            <td>Y</td>
+            <td>357</td>
+            <td>365</td>
+            <td>0</td>
+            <td>119</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>27.997338</td>
+            <td>17.519747</td>
+            <td>100.000</td>
+            <td>2009-01-22 23:00:00+00:00</td>
+            <td>100.000</td>
+            <td>2009-01-23 01:00:00+00:00</td>
+            <td>100.000</td>
+            <td>2009-01-23 02:00:00+00:00</td>
+            <td>100.000</td>
+            <td>2009-01-23 03:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>96.000</td>
+            <td>86.000</td>
+            <td>64.000</td>
+            <td>50.000</td>
+            <td>34.000</td>
+            <td>23.000</td>
+            <td>12.000</td>
+            <td>Coso Gate</td>
+            <td>COSO GATE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>NaN</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>14</th>
+            <td>6</td>
+            <td>27</td>
+            <td>20</td>
+            <td>62201</td>
+            <td>1</td>
+            <td>36.057185</td>
+            <td>-117.861369</td>
+            <td>NAD83</td>
+            <td>Relative Humidity</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - COMPUTED(INDIRECT)</td>
+            <td>1997</td>
+            <td>Percent relative humidity</td>
+            <td>No Events</td>
+            <td>8758</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>365</td>
+            <td>365</td>
+            <td>0</td>
+            <td>2</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>31.604704</td>
+            <td>18.999418</td>
+            <td>100.000</td>
+            <td>1997-01-01 00:00:00+00:00</td>
+            <td>100.000</td>
+            <td>1997-01-01 01:00:00+00:00</td>
+            <td>100.000</td>
+            <td>1997-01-01 02:00:00+00:00</td>
+            <td>100.000</td>
+            <td>1997-01-01 03:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>100.000</td>
+            <td>98.000</td>
+            <td>75.000</td>
+            <td>56.000</td>
+            <td>38.000</td>
+            <td>26.000</td>
+            <td>14.000</td>
+            <td>Coso Gate</td>
+            <td>COSO GATE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>NaN</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>15</th>
+            <td>6</td>
+            <td>27</td>
+            <td>20</td>
+            <td>61102</td>
+            <td>1</td>
+            <td>36.057185</td>
+            <td>-117.861369</td>
+            <td>NAD83</td>
+            <td>Wind Direction - Scalar</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ELECTRONIC OR MACHINE AVERAGE</td>
+            <td>2012</td>
+            <td>Degrees Compass</td>
+            <td>No Events</td>
+            <td>8689</td>
+            <td>99.0</td>
+            <td>Y</td>
+            <td>362</td>
+            <td>366</td>
+            <td>0</td>
+            <td>95</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>157.064104</td>
+            <td>88.343456</td>
+            <td>360.000</td>
+            <td>2012-01-13 07:00:00+00:00</td>
+            <td>360.000</td>
+            <td>2012-01-26 03:00:00+00:00</td>
+            <td>360.000</td>
+            <td>2012-01-26 23:00:00+00:00</td>
+            <td>360.000</td>
+            <td>2012-01-27 07:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>358.000</td>
+            <td>356.000</td>
+            <td>343.000</td>
+            <td>305.000</td>
+            <td>205.000</td>
+            <td>129.000</td>
+            <td>86.000</td>
+            <td>Coso Gate</td>
+            <td>COSO GATE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>NaN</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>16</th>
+            <td>6</td>
+            <td>27</td>
+            <td>20</td>
+            <td>42402</td>
+            <td>1</td>
+            <td>36.057185</td>
+            <td>-117.861369</td>
+            <td>NAD83</td>
+            <td>Hydrogen sulfide</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - PULSED FLUORESCENT</td>
+            <td>1998</td>
+            <td>Parts per million</td>
+            <td>No Events</td>
+            <td>6883</td>
+            <td>79.0</td>
+            <td>Y</td>
+            <td>288</td>
+            <td>365</td>
+            <td>0</td>
+            <td>43</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>0.000484</td>
+            <td>0.000841</td>
+            <td>0.011</td>
+            <td>1998-07-23 06:00:00+00:00</td>
+            <td>0.009</td>
+            <td>1998-07-03 03:00:00+00:00</td>
+            <td>0.009</td>
+            <td>1998-09-25 06:00:00+00:00</td>
+            <td>0.008</td>
+            <td>1998-09-21 04:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>0.004</td>
+            <td>0.003</td>
+            <td>0.002</td>
+            <td>0.001</td>
+            <td>0.001</td>
+            <td>0.000</td>
+            <td>0.000</td>
+            <td>Coso Gate</td>
+            <td>COSO GATE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>NaN</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>17</th>
+            <td>6</td>
+            <td>27</td>
+            <td>20</td>
+            <td>61101</td>
+            <td>1</td>
+            <td>36.057185</td>
+            <td>-117.861369</td>
+            <td>NAD83</td>
+            <td>Wind Speed - Scalar</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ELECTRONIC OR MACHINE AVG.</td>
+            <td>2012</td>
+            <td>Knots</td>
+            <td>No Events</td>
+            <td>8689</td>
+            <td>99.0</td>
+            <td>Y</td>
+            <td>362</td>
+            <td>366</td>
+            <td>0</td>
+            <td>95</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>9.067234</td>
+            <td>5.827613</td>
+            <td>48.400</td>
+            <td>2012-04-26 15:00:00+00:00</td>
+            <td>43.000</td>
+            <td>2012-04-26 16:00:00+00:00</td>
+            <td>39.200</td>
+            <td>2012-02-16 07:00:00+00:00</td>
+            <td>38.700</td>
+            <td>2012-04-26 14:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>25.500</td>
+            <td>22.800</td>
+            <td>19.400</td>
+            <td>16.900</td>
+            <td>12.900</td>
+            <td>8.100</td>
+            <td>2.300</td>
+            <td>Coso Gate</td>
+            <td>COSO GATE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>NaN</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>18</th>
+            <td>6</td>
+            <td>27</td>
+            <td>20</td>
+            <td>62201</td>
+            <td>1</td>
+            <td>36.057185</td>
+            <td>-117.861369</td>
+            <td>NAD83</td>
+            <td>Relative Humidity</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - COMPUTED(INDIRECT)</td>
+            <td>2011</td>
+            <td>Percent relative humidity</td>
+            <td>No Events</td>
+            <td>8698</td>
+            <td>99.0</td>
+            <td>Y</td>
+            <td>363</td>
+            <td>365</td>
+            <td>0</td>
+            <td>62</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>30.868131</td>
+            <td>17.480539</td>
+            <td>100.000</td>
+            <td>2011-01-02 11:00:00+00:00</td>
+            <td>100.000</td>
+            <td>2011-01-02 12:00:00+00:00</td>
+            <td>100.000</td>
+            <td>2011-01-02 13:00:00+00:00</td>
+            <td>100.000</td>
+            <td>2011-01-02 14:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>96.000</td>
+            <td>85.000</td>
+            <td>68.000</td>
+            <td>55.000</td>
+            <td>38.000</td>
+            <td>26.000</td>
+            <td>14.000</td>
+            <td>Coso Gate</td>
+            <td>COSO GATE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>NaN</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>19</th>
+            <td>6</td>
+            <td>27</td>
+            <td>20</td>
+            <td>42402</td>
+            <td>1</td>
+            <td>36.057185</td>
+            <td>-117.861369</td>
+            <td>NAD83</td>
+            <td>Hydrogen sulfide</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - PULSED FLUORESCENT</td>
+            <td>2017</td>
+            <td>Parts per million</td>
+            <td>No Events</td>
+            <td>8426</td>
+            <td>96.0</td>
+            <td>Y</td>
+            <td>356</td>
+            <td>365</td>
+            <td>0</td>
+            <td>334</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>0.001133</td>
+            <td>0.000511</td>
+            <td>0.006</td>
+            <td>2017-05-31 01:00:00+00:00</td>
+            <td>0.005</td>
+            <td>2017-01-06 21:00:00+00:00</td>
+            <td>0.005</td>
+            <td>2017-01-06 22:00:00+00:00</td>
+            <td>0.005</td>
+            <td>2017-01-07 01:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>0.003</td>
+            <td>0.002</td>
+            <td>0.002</td>
+            <td>0.002</td>
+            <td>0.001</td>
+            <td>0.001</td>
+            <td>0.001</td>
+            <td>Coso Gate</td>
+            <td>COSO GATE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>NaN</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>20</th>
+            <td>6</td>
+            <td>27</td>
+            <td>20</td>
+            <td>62101</td>
+            <td>1</td>
+            <td>36.057185</td>
+            <td>-117.861369</td>
+            <td>NAD83</td>
+            <td>Outdoor Temperature</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ELECTRONIC OR MACHINE AVG.</td>
+            <td>2000</td>
+            <td>Degrees Fahrenheit</td>
+            <td>No Events</td>
+            <td>4366</td>
+            <td>50.0</td>
+            <td>N</td>
+            <td>182</td>
+            <td>366</td>
+            <td>0</td>
+            <td>2</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>59.300962</td>
+            <td>15.180521</td>
+            <td>100.000</td>
+            <td>2000-06-15 14:00:00+00:00</td>
+            <td>100.000</td>
+            <td>2000-06-15 15:00:00+00:00</td>
+            <td>99.000</td>
+            <td>2000-06-15 16:00:00+00:00</td>
+            <td>98.000</td>
+            <td>2000-06-14 16:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>92.000</td>
+            <td>90.000</td>
+            <td>86.000</td>
+            <td>81.000</td>
+            <td>71.000</td>
+            <td>57.000</td>
+            <td>40.000</td>
+            <td>Coso Gate</td>
+            <td>COSO GATE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>NaN</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>21</th>
+            <td>6</td>
+            <td>27</td>
+            <td>20</td>
+            <td>62101</td>
+            <td>1</td>
+            <td>36.057185</td>
+            <td>-117.861369</td>
+            <td>NAD83</td>
+            <td>Outdoor Temperature</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ELECTRONIC OR MACHINE AVG.</td>
+            <td>2011</td>
+            <td>Degrees Fahrenheit</td>
+            <td>No Events</td>
+            <td>8746</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>364</td>
+            <td>365</td>
+            <td>0</td>
+            <td>14</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>60.814201</td>
+            <td>16.148351</td>
+            <td>96.000</td>
+            <td>2011-07-02 15:00:00+00:00</td>
+            <td>96.000</td>
+            <td>2011-07-02 16:00:00+00:00</td>
+            <td>96.000</td>
+            <td>2011-07-02 17:00:00+00:00</td>
+            <td>95.000</td>
+            <td>2011-06-23 13:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>91.000</td>
+            <td>90.000</td>
+            <td>87.000</td>
+            <td>83.000</td>
+            <td>75.000</td>
+            <td>60.000</td>
+            <td>40.000</td>
+            <td>Coso Gate</td>
+            <td>COSO GATE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>NaN</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>22</th>
+            <td>6</td>
+            <td>27</td>
+            <td>20</td>
+            <td>61101</td>
+            <td>1</td>
+            <td>36.057185</td>
+            <td>-117.861369</td>
+            <td>NAD83</td>
+            <td>Wind Speed - Scalar</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ELECTRONIC OR MACHINE AVG.</td>
+            <td>2009</td>
+            <td>Knots</td>
+            <td>No Events</td>
+            <td>8703</td>
+            <td>99.0</td>
+            <td>Y</td>
+            <td>360</td>
+            <td>365</td>
+            <td>0</td>
+            <td>57</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>8.522337</td>
+            <td>6.131924</td>
+            <td>47.700</td>
+            <td>2009-12-22 17:00:00+00:00</td>
+            <td>40.800</td>
+            <td>2009-12-22 18:00:00+00:00</td>
+            <td>39.700</td>
+            <td>2009-12-23 00:00:00+00:00</td>
+            <td>39.100</td>
+            <td>2009-12-22 16:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>27.300</td>
+            <td>24.500</td>
+            <td>20.200</td>
+            <td>16.800</td>
+            <td>12.000</td>
+            <td>7.400</td>
+            <td>1.700</td>
+            <td>Coso Gate</td>
+            <td>COSO GATE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>NaN</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>23</th>
+            <td>6</td>
+            <td>27</td>
+            <td>20</td>
+            <td>61101</td>
+            <td>1</td>
+            <td>36.057185</td>
+            <td>-117.861369</td>
+            <td>NAD83</td>
+            <td>Wind Speed - Scalar</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ELECTRONIC OR MACHINE AVG.</td>
+            <td>2015</td>
+            <td>Knots</td>
+            <td>No Events</td>
+            <td>8734</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>364</td>
+            <td>365</td>
+            <td>0</td>
+            <td>26</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>8.707236</td>
+            <td>5.851523</td>
+            <td>37.600</td>
+            <td>2015-11-16 10:00:00+00:00</td>
+            <td>36.600</td>
+            <td>2015-11-16 09:00:00+00:00</td>
+            <td>36.400</td>
+            <td>2015-04-25 14:00:00+00:00</td>
+            <td>35.900</td>
+            <td>2015-11-16 07:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>26.200</td>
+            <td>23.900</td>
+            <td>19.400</td>
+            <td>16.500</td>
+            <td>12.500</td>
+            <td>7.700</td>
+            <td>2.100</td>
+            <td>Coso Gate</td>
+            <td>COSO GATE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>NaN</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>24</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1033</td>
+            <td>61106</td>
+            <td>1</td>
+            <td>37.155494</td>
+            <td>-118.293547</td>
+            <td>NAD83</td>
+            <td>Std Dev Hz Wind Direction</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ARITHMETIC STANDARD DEVIATION</td>
+            <td>2019</td>
+            <td>Degrees Compass</td>
+            <td>No Events</td>
+            <td>6255</td>
+            <td>71.0</td>
+            <td>N</td>
+            <td>260</td>
+            <td>365</td>
+            <td>0</td>
+            <td>11</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>27.299440</td>
+            <td>14.931483</td>
+            <td>81.000</td>
+            <td>2019-09-03 16:00:00+00:00</td>
+            <td>79.000</td>
+            <td>2019-02-12 22:00:00+00:00</td>
+            <td>79.000</td>
+            <td>2019-05-25 22:00:00+00:00</td>
+            <td>79.000</td>
+            <td>2019-06-14 18:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>72.000</td>
+            <td>67.000</td>
+            <td>60.000</td>
+            <td>50.000</td>
+            <td>35.000</td>
+            <td>22.000</td>
+            <td>13.000</td>
+            <td>Stn.1 Big Pine Paiute site</td>
+            <td>School St.</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Big Pine</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>25</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1033</td>
+            <td>61103</td>
+            <td>1</td>
+            <td>37.155494</td>
+            <td>-118.293547</td>
+            <td>NAD83</td>
+            <td>Wind Speed - Resultant</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - VECTOR SUMMATION</td>
+            <td>2018</td>
+            <td>Knots</td>
+            <td>No Events</td>
+            <td>4277</td>
+            <td>49.0</td>
+            <td>N</td>
+            <td>178</td>
+            <td>365</td>
+            <td>0</td>
+            <td>4352</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>5.167781</td>
+            <td>3.823509</td>
+            <td>28.500</td>
+            <td>2018-03-02 13:00:00+00:00</td>
+            <td>28.300</td>
+            <td>2018-03-02 12:00:00+00:00</td>
+            <td>25.600</td>
+            <td>2018-03-02 11:00:00+00:00</td>
+            <td>25.500</td>
+            <td>2018-03-13 16:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>17.200</td>
+            <td>15.600</td>
+            <td>13.300</td>
+            <td>11.000</td>
+            <td>6.700</td>
+            <td>4.000</td>
+            <td>1.600</td>
+            <td>Stn.1 Big Pine Paiute site</td>
+            <td>School St.</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Big Pine</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>26</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1033</td>
+            <td>65102</td>
+            <td>1</td>
+            <td>37.155494</td>
+            <td>-118.293547</td>
+            <td>NAD83</td>
+            <td>Rain/melt precipitation</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>TIPPING BUCKET - METONE 8 HEATD RAIN GAUGE 375</td>
+            <td>2019</td>
+            <td>Inches (rainfall)</td>
+            <td>No Events</td>
+            <td>6271</td>
+            <td>72.0</td>
+            <td>N</td>
+            <td>261</td>
+            <td>365</td>
+            <td>0</td>
+            <td>9</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>0.001588</td>
+            <td>0.014583</td>
+            <td>0.370</td>
+            <td>2019-03-06 00:00:00+00:00</td>
+            <td>0.360</td>
+            <td>2019-03-05 23:00:00+00:00</td>
+            <td>0.340</td>
+            <td>2019-01-17 01:00:00+00:00</td>
+            <td>0.330</td>
+            <td>2019-01-17 02:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>0.060</td>
+            <td>0.010</td>
+            <td>0.000</td>
+            <td>0.000</td>
+            <td>0.000</td>
+            <td>0.000</td>
+            <td>0.000</td>
+            <td>Stn.1 Big Pine Paiute site</td>
+            <td>School St.</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Big Pine</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>27</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1033</td>
+            <td>62101</td>
+            <td>1</td>
+            <td>37.155494</td>
+            <td>-118.293547</td>
+            <td>NAD83</td>
+            <td>Outdoor Temperature</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ELECTRONIC OR MACHINE AVG.</td>
+            <td>2016</td>
+            <td>Degrees Fahrenheit</td>
+            <td>No Events</td>
+            <td>4340</td>
+            <td>49.0</td>
+            <td>N</td>
+            <td>181</td>
+            <td>366</td>
+            <td>0</td>
+            <td>54</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>65.421198</td>
+            <td>18.806998</td>
+            <td>104.000</td>
+            <td>2016-07-23 15:00:00+00:00</td>
+            <td>104.000</td>
+            <td>2016-07-27 13:00:00+00:00</td>
+            <td>104.000</td>
+            <td>2016-07-28 13:00:00+00:00</td>
+            <td>103.000</td>
+            <td>2016-07-23 14:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>100.000</td>
+            <td>98.000</td>
+            <td>95.000</td>
+            <td>91.000</td>
+            <td>80.000</td>
+            <td>66.000</td>
+            <td>39.000</td>
+            <td>Stn.1 Big Pine Paiute site</td>
+            <td>School St.</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Big Pine</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>28</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1033</td>
+            <td>61103</td>
+            <td>1</td>
+            <td>37.155494</td>
+            <td>-118.293547</td>
+            <td>NAD83</td>
+            <td>Wind Speed - Resultant</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - VECTOR SUMMATION</td>
+            <td>2017</td>
+            <td>Knots</td>
+            <td>No Events</td>
+            <td>4832</td>
+            <td>55.0</td>
+            <td>N</td>
+            <td>188</td>
+            <td>365</td>
+            <td>0</td>
+            <td>3774</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>5.816453</td>
+            <td>4.179683</td>
+            <td>24.100</td>
+            <td>2017-03-30 13:00:00+00:00</td>
+            <td>24.000</td>
+            <td>2017-03-30 15:00:00+00:00</td>
+            <td>23.400</td>
+            <td>2017-05-31 16:00:00+00:00</td>
+            <td>23.000</td>
+            <td>2017-03-30 14:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>18.600</td>
+            <td>17.200</td>
+            <td>14.800</td>
+            <td>12.100</td>
+            <td>7.800</td>
+            <td>4.500</td>
+            <td>1.600</td>
+            <td>Stn.1 Big Pine Paiute site</td>
+            <td>School St.</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Big Pine</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>29</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1033</td>
+            <td>63301</td>
+            <td>1</td>
+            <td>37.155494</td>
+            <td>-118.293547</td>
+            <td>NAD83</td>
+            <td>Solar radiation</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - PYRANOMETER</td>
+            <td>2018</td>
+            <td>Langleys/minute</td>
+            <td>No Events</td>
+            <td>8614</td>
+            <td>98.0</td>
+            <td>Y</td>
+            <td>359</td>
+            <td>365</td>
+            <td>0</td>
+            <td>15</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>0.358310</td>
+            <td>0.482607</td>
+            <td>1.670</td>
+            <td>2018-07-12 12:00:00+00:00</td>
+            <td>1.610</td>
+            <td>2018-05-27 11:00:00+00:00</td>
+            <td>1.600</td>
+            <td>2018-05-02 11:00:00+00:00</td>
+            <td>1.590</td>
+            <td>2018-06-21 11:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>1.530</td>
+            <td>1.480</td>
+            <td>1.370</td>
+            <td>1.190</td>
+            <td>0.710</td>
+            <td>0.020</td>
+            <td>0.000</td>
+            <td>Stn.1 Big Pine Paiute site</td>
+            <td>School St.</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Big Pine</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>30</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1033</td>
+            <td>61103</td>
+            <td>1</td>
+            <td>37.155494</td>
+            <td>-118.293547</td>
+            <td>NAD83</td>
+            <td>Wind Speed - Resultant</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - VECTOR SUMMATION</td>
+            <td>2019</td>
+            <td>Knots</td>
+            <td>No Events</td>
+            <td>6255</td>
+            <td>71.0</td>
+            <td>N</td>
+            <td>260</td>
+            <td>365</td>
+            <td>0</td>
+            <td>11</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>5.790104</td>
+            <td>4.066940</td>
+            <td>30.400</td>
+            <td>2019-02-02 13:00:00+00:00</td>
+            <td>27.900</td>
+            <td>2019-02-02 14:00:00+00:00</td>
+            <td>27.300</td>
+            <td>2019-02-02 12:00:00+00:00</td>
+            <td>25.000</td>
+            <td>2019-01-05 15:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>18.000</td>
+            <td>16.300</td>
+            <td>14.000</td>
+            <td>11.900</td>
+            <td>8.100</td>
+            <td>4.300</td>
+            <td>1.800</td>
+            <td>Stn.1 Big Pine Paiute site</td>
+            <td>School St.</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Big Pine</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>31</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1033</td>
+            <td>61106</td>
+            <td>1</td>
+            <td>37.155494</td>
+            <td>-118.293547</td>
+            <td>NAD83</td>
+            <td>Std Dev Hz Wind Direction</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ARITHMETIC STANDARD DEVIATION</td>
+            <td>2018</td>
+            <td>Degrees Compass</td>
+            <td>No Events</td>
+            <td>4277</td>
+            <td>49.0</td>
+            <td>N</td>
+            <td>178</td>
+            <td>365</td>
+            <td>0</td>
+            <td>4352</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>27.571662</td>
+            <td>15.660059</td>
+            <td>80.000</td>
+            <td>2018-02-04 02:00:00+00:00</td>
+            <td>80.000</td>
+            <td>2018-11-06 12:00:00+00:00</td>
+            <td>79.000</td>
+            <td>2018-02-01 17:00:00+00:00</td>
+            <td>79.000</td>
+            <td>2018-12-21 05:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>72.000</td>
+            <td>68.000</td>
+            <td>61.000</td>
+            <td>52.000</td>
+            <td>36.000</td>
+            <td>22.000</td>
+            <td>12.000</td>
+            <td>Stn.1 Big Pine Paiute site</td>
+            <td>School St.</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Big Pine</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>32</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1033</td>
+            <td>64101</td>
+            <td>1</td>
+            <td>37.155494</td>
+            <td>-118.293547</td>
+            <td>NAD83</td>
+            <td>Barometric pressure</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ANEROID</td>
+            <td>2016</td>
+            <td>Millibars</td>
+            <td>No Events</td>
+            <td>4340</td>
+            <td>49.0</td>
+            <td>N</td>
+            <td>181</td>
+            <td>366</td>
+            <td>0</td>
+            <td>54</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>879.477650</td>
+            <td>4.435521</td>
+            <td>892.000</td>
+            <td>2016-12-19 06:00:00+00:00</td>
+            <td>892.000</td>
+            <td>2016-12-19 07:00:00+00:00</td>
+            <td>892.000</td>
+            <td>2016-12-19 08:00:00+00:00</td>
+            <td>892.000</td>
+            <td>2016-12-19 09:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>889.000</td>
+            <td>889.000</td>
+            <td>887.000</td>
+            <td>885.000</td>
+            <td>882.000</td>
+            <td>879.000</td>
+            <td>874.000</td>
+            <td>Stn.1 Big Pine Paiute site</td>
+            <td>School St.</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Big Pine</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>33</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1033</td>
+            <td>63301</td>
+            <td>1</td>
+            <td>37.155494</td>
+            <td>-118.293547</td>
+            <td>NAD83</td>
+            <td>Solar radiation</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - PYRANOMETER</td>
+            <td>2019</td>
+            <td>Langleys/minute</td>
+            <td>No Events</td>
+            <td>6256</td>
+            <td>71.0</td>
+            <td>N</td>
+            <td>258</td>
+            <td>365</td>
+            <td>0</td>
+            <td>24</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>0.388828</td>
+            <td>0.509012</td>
+            <td>1.660</td>
+            <td>2019-06-24 13:00:00+00:00</td>
+            <td>1.650</td>
+            <td>2019-05-16 12:00:00+00:00</td>
+            <td>1.640</td>
+            <td>2019-06-17 11:00:00+00:00</td>
+            <td>1.620</td>
+            <td>2019-05-25 11:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>1.550</td>
+            <td>1.500</td>
+            <td>1.420</td>
+            <td>1.270</td>
+            <td>0.780</td>
+            <td>0.040</td>
+            <td>0.000</td>
+            <td>Stn.1 Big Pine Paiute site</td>
+            <td>School St.</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Big Pine</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>34</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1033</td>
+            <td>65102</td>
+            <td>1</td>
+            <td>37.155494</td>
+            <td>-118.293547</td>
+            <td>NAD83</td>
+            <td>Rain/melt precipitation</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>TIPPING BUCKET - METONE 8 HEATD RAIN GAUGE 375</td>
+            <td>2017</td>
+            <td>Inches (rainfall)</td>
+            <td>No Events</td>
+            <td>8593</td>
+            <td>98.0</td>
+            <td>Y</td>
+            <td>356</td>
+            <td>365</td>
+            <td>0</td>
+            <td>13</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>0.001847</td>
+            <td>0.021427</td>
+            <td>1.340</td>
+            <td>2017-01-08 11:00:00+00:00</td>
+            <td>0.420</td>
+            <td>2017-01-08 22:00:00+00:00</td>
+            <td>0.410</td>
+            <td>2017-01-08 23:00:00+00:00</td>
+            <td>0.400</td>
+            <td>2017-01-08 21:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>0.050</td>
+            <td>0.010</td>
+            <td>0.000</td>
+            <td>0.000</td>
+            <td>0.000</td>
+            <td>0.000</td>
+            <td>0.000</td>
+            <td>Stn.1 Big Pine Paiute site</td>
+            <td>School St.</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Big Pine</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>35</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1033</td>
+            <td>62201</td>
+            <td>1</td>
+            <td>37.155494</td>
+            <td>-118.293547</td>
+            <td>NAD83</td>
+            <td>Relative Humidity</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - HYGROTHERMOGRAPH ELEC OR MACH AVG</td>
+            <td>2016</td>
+            <td>Percent relative humidity</td>
+            <td>No Events</td>
+            <td>4337</td>
+            <td>49.0</td>
+            <td>N</td>
+            <td>181</td>
+            <td>366</td>
+            <td>0</td>
+            <td>57</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>24.689647</td>
+            <td>16.020702</td>
+            <td>92.000</td>
+            <td>2016-12-16 05:00:00+00:00</td>
+            <td>91.000</td>
+            <td>2016-10-28 05:00:00+00:00</td>
+            <td>91.000</td>
+            <td>2016-10-28 06:00:00+00:00</td>
+            <td>90.000</td>
+            <td>2016-10-28 04:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>78.000</td>
+            <td>69.000</td>
+            <td>58.000</td>
+            <td>48.000</td>
+            <td>32.000</td>
+            <td>21.000</td>
+            <td>9.000</td>
+            <td>Stn.1 Big Pine Paiute site</td>
+            <td>School St.</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Big Pine</td>
+            <td>Bishop, CA</td>
+            <td>2020-09-11</td>
+            </tr>
+            <tr>
+            <th>36</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>81102</td>
+            <td>4</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>PM10 Total 0-10um STP</td>
+            <td>24-HR BLK AVG</td>
+            <td>PM10 24-hour 2006</td>
+            <td>Daily Mean</td>
+            <td>NaN</td>
+            <td>2011</td>
+            <td>Micrograms/cubic meter (25 C)</td>
+            <td>Events Included</td>
+            <td>356</td>
+            <td>98.0</td>
+            <td>Y</td>
+            <td>356</td>
+            <td>365</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>17.606742</td>
+            <td>11.403353</td>
+            <td>121.000</td>
+            <td>2011-02-07 00:00:00+00:00</td>
+            <td>87.000</td>
+            <td>2011-11-30 00:00:00+00:00</td>
+            <td>84.000</td>
+            <td>2011-12-01 00:00:00+00:00</td>
+            <td>72.000</td>
+            <td>2011-03-18 00:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>72.000</td>
+            <td>41.000</td>
+            <td>35.000</td>
+            <td>28.000</td>
+            <td>21.000</td>
+            <td>16.000</td>
+            <td>7.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2021-03-12</td>
+            </tr>
+            <tr>
+            <th>37</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>81102</td>
+            <td>4</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>PM10 Total 0-10um STP</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL-R&amp;P SA246B-INLET - TEOM-GRAVIMETRIC</td>
+            <td>2013</td>
+            <td>Micrograms/cubic meter (25 C)</td>
+            <td>Events Included</td>
+            <td>8659</td>
+            <td>99.0</td>
+            <td>Y</td>
+            <td>362</td>
+            <td>365</td>
+            <td>8659</td>
+            <td>101</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>19.931170</td>
+            <td>21.712290</td>
+            <td>424.000</td>
+            <td>2013-02-23 10:00:00+00:00</td>
+            <td>355.000</td>
+            <td>2013-03-05 10:00:00+00:00</td>
+            <td>333.000</td>
+            <td>2013-12-03 15:00:00+00:00</td>
+            <td>292.000</td>
+            <td>2013-04-30 20:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>104.000</td>
+            <td>78.000</td>
+            <td>55.000</td>
+            <td>41.000</td>
+            <td>25.000</td>
+            <td>15.000</td>
+            <td>4.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2021-03-12</td>
+            </tr>
+            <tr>
+            <th>38</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>88500</td>
+            <td>3</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>PM2.5 Total Atmospheric</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>PM2.5 VSCC - FDMS-Gravimetric</td>
+            <td>2005</td>
+            <td>Micrograms/cubic meter (LC)</td>
+            <td>No Events</td>
+            <td>8655</td>
+            <td>99.0</td>
+            <td>Y</td>
+            <td>363</td>
+            <td>365</td>
+            <td>0</td>
+            <td>94</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>6.629694</td>
+            <td>8.817712</td>
+            <td>96.000</td>
+            <td>2005-07-04 21:00:00+00:00</td>
+            <td>96.000</td>
+            <td>2005-12-20 20:00:00+00:00</td>
+            <td>89.000</td>
+            <td>2005-06-25 11:00:00+00:00</td>
+            <td>80.000</td>
+            <td>2005-01-05 22:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>40.000</td>
+            <td>33.000</td>
+            <td>22.000</td>
+            <td>16.000</td>
+            <td>10.000</td>
+            <td>5.000</td>
+            <td>-1.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-07-22</td>
+            </tr>
+            <tr>
+            <th>39</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>88500</td>
+            <td>3</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>PM2.5 Total Atmospheric</td>
+            <td>24-HR BLK AVG</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>NaN</td>
+            <td>2006</td>
+            <td>Micrograms/cubic meter (LC)</td>
+            <td>No Events</td>
+            <td>329</td>
+            <td>90.0</td>
+            <td>Y</td>
+            <td>329</td>
+            <td>365</td>
+            <td>0</td>
+            <td>0</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>8.164742</td>
+            <td>5.089166</td>
+            <td>29.200</td>
+            <td>2006-01-28 00:00:00+00:00</td>
+            <td>27.200</td>
+            <td>2006-01-06 00:00:00+00:00</td>
+            <td>26.400</td>
+            <td>2006-01-12 00:00:00+00:00</td>
+            <td>26.400</td>
+            <td>2006-12-20 00:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>26.400</td>
+            <td>23.200</td>
+            <td>18.600</td>
+            <td>14.600</td>
+            <td>10.300</td>
+            <td>6.800</td>
+            <td>3.200</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-07-22</td>
+            </tr>
+            <tr>
+            <th>40</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>85101</td>
+            <td>4</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>PM10 - LC</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL-R&amp;P SA246B-INLET - TEOM-GRAVIMETRIC</td>
+            <td>2017</td>
+            <td>Micrograms/cubic meter (LC)</td>
+            <td>Events Included</td>
+            <td>2461</td>
+            <td>98.0</td>
+            <td>Y</td>
+            <td>103</td>
+            <td>105</td>
+            <td>2461</td>
+            <td>27</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>15.175538</td>
+            <td>14.790985</td>
+            <td>225.000</td>
+            <td>2017-03-30 14:00:00+00:00</td>
+            <td>220.000</td>
+            <td>2017-03-30 13:00:00+00:00</td>
+            <td>188.000</td>
+            <td>2017-03-30 15:00:00+00:00</td>
+            <td>155.000</td>
+            <td>2017-04-06 15:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>66.000</td>
+            <td>53.000</td>
+            <td>40.000</td>
+            <td>30.000</td>
+            <td>19.000</td>
+            <td>12.000</td>
+            <td>4.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>41</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>62101</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Outdoor Temperature</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ELECTRONIC OR MACHINE AVG.</td>
+            <td>2017</td>
+            <td>Degrees Fahrenheit</td>
+            <td>No Events</td>
+            <td>8732</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>363</td>
+            <td>365</td>
+            <td>0</td>
+            <td>12</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>58.090357</td>
+            <td>17.669874</td>
+            <td>99.000</td>
+            <td>2017-06-19 13:00:00+00:00</td>
+            <td>99.000</td>
+            <td>2017-06-20 13:00:00+00:00</td>
+            <td>99.000</td>
+            <td>2017-06-20 14:00:00+00:00</td>
+            <td>99.000</td>
+            <td>2017-06-20 15:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>95.000</td>
+            <td>93.000</td>
+            <td>89.000</td>
+            <td>83.000</td>
+            <td>71.000</td>
+            <td>57.000</td>
+            <td>35.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>42</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>88500</td>
+            <td>3</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>PM2.5 Total Atmospheric</td>
+            <td>24-HR BLK AVG</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>NaN</td>
+            <td>2017</td>
+            <td>Micrograms/cubic meter (LC)</td>
+            <td>No Events</td>
+            <td>311</td>
+            <td>85.0</td>
+            <td>N</td>
+            <td>311</td>
+            <td>365</td>
+            <td>0</td>
+            <td>0</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>7.644695</td>
+            <td>5.116453</td>
+            <td>26.400</td>
+            <td>2017-12-22 00:00:00+00:00</td>
+            <td>23.900</td>
+            <td>2017-12-23 00:00:00+00:00</td>
+            <td>23.800</td>
+            <td>2017-12-30 00:00:00+00:00</td>
+            <td>23.400</td>
+            <td>2017-12-31 00:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>23.400</td>
+            <td>21.500</td>
+            <td>19.200</td>
+            <td>15.200</td>
+            <td>9.800</td>
+            <td>6.500</td>
+            <td>2.300</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-07-22</td>
+            </tr>
+            <tr>
+            <th>43</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>61105</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Peak Wind Gust</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - SPOT READING</td>
+            <td>2014</td>
+            <td>Knots</td>
+            <td>No Events</td>
+            <td>8723</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>362</td>
+            <td>365</td>
+            <td>0</td>
+            <td>10</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>9.198097</td>
+            <td>6.058396</td>
+            <td>47.000</td>
+            <td>2014-12-12 02:00:00+00:00</td>
+            <td>43.000</td>
+            <td>2014-12-12 03:00:00+00:00</td>
+            <td>42.000</td>
+            <td>2014-12-12 00:00:00+00:00</td>
+            <td>42.000</td>
+            <td>2014-12-12 04:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>28.000</td>
+            <td>26.000</td>
+            <td>22.000</td>
+            <td>18.000</td>
+            <td>12.000</td>
+            <td>7.000</td>
+            <td>4.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>44</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>61103</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Wind Speed - Resultant</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - VECTOR SUMMATION</td>
+            <td>2005</td>
+            <td>Knots</td>
+            <td>No Events</td>
+            <td>8691</td>
+            <td>99.0</td>
+            <td>Y</td>
+            <td>362</td>
+            <td>365</td>
+            <td>0</td>
+            <td>63</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>3.412553</td>
+            <td>2.663421</td>
+            <td>17.800</td>
+            <td>2005-01-07 12:00:00+00:00</td>
+            <td>17.500</td>
+            <td>2005-11-26 13:00:00+00:00</td>
+            <td>16.200</td>
+            <td>2005-01-07 11:00:00+00:00</td>
+            <td>16.000</td>
+            <td>2005-04-07 15:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>12.200</td>
+            <td>11.000</td>
+            <td>9.300</td>
+            <td>7.400</td>
+            <td>4.400</td>
+            <td>2.400</td>
+            <td>1.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>45</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>61106</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Std Dev Hz Wind Direction</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ARITHMETIC STANDARD DEVIATION</td>
+            <td>2008</td>
+            <td>Degrees Compass</td>
+            <td>No Events</td>
+            <td>8776</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>365</td>
+            <td>366</td>
+            <td>0</td>
+            <td>8</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>33.611167</td>
+            <td>15.641017</td>
+            <td>80.600</td>
+            <td>2008-07-10 14:00:00+00:00</td>
+            <td>80.600</td>
+            <td>2008-12-08 10:00:00+00:00</td>
+            <td>80.100</td>
+            <td>2008-08-10 17:00:00+00:00</td>
+            <td>79.900</td>
+            <td>2008-04-26 00:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>74.000</td>
+            <td>70.300</td>
+            <td>64.000</td>
+            <td>56.900</td>
+            <td>44.300</td>
+            <td>30.000</td>
+            <td>16.600</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>46</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>85101</td>
+            <td>4</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>PM10 - LC</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL-R&amp;P SA246B-INLET - TEOM-GRAVIMETRIC</td>
+            <td>2017</td>
+            <td>Micrograms/cubic meter (LC)</td>
+            <td>Concurred Events Excluded</td>
+            <td>2461</td>
+            <td>98.0</td>
+            <td>Y</td>
+            <td>103</td>
+            <td>105</td>
+            <td>2461</td>
+            <td>27</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>15.175538</td>
+            <td>14.790985</td>
+            <td>225.000</td>
+            <td>2017-03-30 14:00:00+00:00</td>
+            <td>220.000</td>
+            <td>2017-03-30 13:00:00+00:00</td>
+            <td>188.000</td>
+            <td>2017-03-30 15:00:00+00:00</td>
+            <td>155.000</td>
+            <td>2017-04-06 15:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>66.000</td>
+            <td>53.000</td>
+            <td>40.000</td>
+            <td>30.000</td>
+            <td>19.000</td>
+            <td>12.000</td>
+            <td>4.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>47</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>88500</td>
+            <td>3</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>PM2.5 Total Atmospheric</td>
+            <td>24-HR BLK AVG</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>NaN</td>
+            <td>2014</td>
+            <td>Micrograms/cubic meter (LC)</td>
+            <td>No Events</td>
+            <td>323</td>
+            <td>88.0</td>
+            <td>N</td>
+            <td>323</td>
+            <td>365</td>
+            <td>0</td>
+            <td>0</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>5.827864</td>
+            <td>4.518990</td>
+            <td>37.100</td>
+            <td>2014-09-19 00:00:00+00:00</td>
+            <td>36.500</td>
+            <td>2014-06-23 00:00:00+00:00</td>
+            <td>32.400</td>
+            <td>2014-06-18 00:00:00+00:00</td>
+            <td>25.400</td>
+            <td>2014-06-19 00:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>25.400</td>
+            <td>18.800</td>
+            <td>12.400</td>
+            <td>10.000</td>
+            <td>7.300</td>
+            <td>5.200</td>
+            <td>1.800</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-07-22</td>
+            </tr>
+            <tr>
+            <th>48</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>61104</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Wind Direction - Resultant</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - VECTOR SUMMATION</td>
+            <td>2006</td>
+            <td>Degrees Compass</td>
+            <td>No Events</td>
+            <td>8693</td>
+            <td>99.0</td>
+            <td>Y</td>
+            <td>361</td>
+            <td>365</td>
+            <td>0</td>
+            <td>46</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>230.501898</td>
+            <td>102.924830</td>
+            <td>360.000</td>
+            <td>2006-01-11 18:00:00+00:00</td>
+            <td>360.000</td>
+            <td>2006-01-26 22:00:00+00:00</td>
+            <td>360.000</td>
+            <td>2006-02-06 00:00:00+00:00</td>
+            <td>360.000</td>
+            <td>2006-02-19 07:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>357.000</td>
+            <td>354.000</td>
+            <td>347.000</td>
+            <td>336.000</td>
+            <td>314.000</td>
+            <td>278.000</td>
+            <td>66.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>49</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>81102</td>
+            <td>4</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>PM10 Total 0-10um STP</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL-R&amp;P SA246B-INLET - TEOM-GRAVIMETRIC</td>
+            <td>2018</td>
+            <td>Micrograms/cubic meter (25 C)</td>
+            <td>Concurred Events Excluded</td>
+            <td>8553</td>
+            <td>98.0</td>
+            <td>Y</td>
+            <td>356</td>
+            <td>365</td>
+            <td>8553</td>
+            <td>197</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>24.663744</td>
+            <td>27.089096</td>
+            <td>742.000</td>
+            <td>2018-02-10 14:00:00+00:00</td>
+            <td>615.000</td>
+            <td>2018-02-10 13:00:00+00:00</td>
+            <td>588.000</td>
+            <td>2018-02-10 12:00:00+00:00</td>
+            <td>507.000</td>
+            <td>2018-02-10 15:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>122.000</td>
+            <td>87.000</td>
+            <td>60.000</td>
+            <td>45.000</td>
+            <td>30.000</td>
+            <td>19.000</td>
+            <td>7.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2021-03-12</td>
+            </tr>
+            <tr>
+            <th>50</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>88500</td>
+            <td>3</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>PM2.5 Total Atmospheric</td>
+            <td>24-HR BLK AVG</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>NaN</td>
+            <td>2018</td>
+            <td>Micrograms/cubic meter (LC)</td>
+            <td>No Events</td>
+            <td>310</td>
+            <td>85.0</td>
+            <td>N</td>
+            <td>310</td>
+            <td>365</td>
+            <td>0</td>
+            <td>0</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>8.787742</td>
+            <td>11.981889</td>
+            <td>138.200</td>
+            <td>2018-08-03 00:00:00+00:00</td>
+            <td>88.200</td>
+            <td>2018-08-04 00:00:00+00:00</td>
+            <td>63.600</td>
+            <td>2018-08-02 00:00:00+00:00</td>
+            <td>51.600</td>
+            <td>2018-08-06 00:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>51.600</td>
+            <td>43.700</td>
+            <td>21.600</td>
+            <td>17.300</td>
+            <td>11.300</td>
+            <td>5.700</td>
+            <td>1.400</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-07-22</td>
+            </tr>
+            <tr>
+            <th>51</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>61103</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Wind Speed - Resultant</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - VECTOR SUMMATION</td>
+            <td>2010</td>
+            <td>Knots</td>
+            <td>No Events</td>
+            <td>8693</td>
+            <td>99.0</td>
+            <td>Y</td>
+            <td>359</td>
+            <td>365</td>
+            <td>0</td>
+            <td>61</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>3.542114</td>
+            <td>3.001216</td>
+            <td>26.100</td>
+            <td>2010-01-20 14:00:00+00:00</td>
+            <td>23.000</td>
+            <td>2010-04-11 13:00:00+00:00</td>
+            <td>22.000</td>
+            <td>2010-04-11 12:00:00+00:00</td>
+            <td>21.500</td>
+            <td>2010-01-20 15:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>13.600</td>
+            <td>12.200</td>
+            <td>10.000</td>
+            <td>7.900</td>
+            <td>4.600</td>
+            <td>2.400</td>
+            <td>1.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>52</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>81102</td>
+            <td>4</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>PM10 Total 0-10um STP</td>
+            <td>24-HR BLK AVG</td>
+            <td>PM10 24-hour 2006</td>
+            <td>Daily Mean</td>
+            <td>NaN</td>
+            <td>2010</td>
+            <td>Micrograms/cubic meter (25 C)</td>
+            <td>Events Included</td>
+            <td>246</td>
+            <td>67.0</td>
+            <td>N</td>
+            <td>246</td>
+            <td>365</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>18.682927</td>
+            <td>10.417268</td>
+            <td>71.000</td>
+            <td>2010-04-09 00:00:00+00:00</td>
+            <td>64.000</td>
+            <td>2010-04-11 00:00:00+00:00</td>
+            <td>61.000</td>
+            <td>2010-09-06 00:00:00+00:00</td>
+            <td>57.000</td>
+            <td>2010-05-26 00:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>61.000</td>
+            <td>52.000</td>
+            <td>34.000</td>
+            <td>29.000</td>
+            <td>24.000</td>
+            <td>18.000</td>
+            <td>7.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2021-03-12</td>
+            </tr>
+            <tr>
+            <th>53</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>63301</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Solar radiation</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - PYRANOMETER</td>
+            <td>2006</td>
+            <td>Langleys/minute</td>
+            <td>No Events</td>
+            <td>8722</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>363</td>
+            <td>365</td>
+            <td>0</td>
+            <td>17</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>0.317485</td>
+            <td>0.426042</td>
+            <td>1.430</td>
+            <td>2006-04-23 10:00:00+00:00</td>
+            <td>1.420</td>
+            <td>2006-05-27 11:00:00+00:00</td>
+            <td>1.410</td>
+            <td>2006-04-24 12:00:00+00:00</td>
+            <td>1.410</td>
+            <td>2006-05-20 11:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>1.340</td>
+            <td>1.310</td>
+            <td>1.220</td>
+            <td>1.050</td>
+            <td>0.630</td>
+            <td>0.010</td>
+            <td>0.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>54</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>81102</td>
+            <td>4</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>PM10 Total 0-10um STP</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL-R&amp;P SA246B-INLET - TEOM-GRAVIMETRIC</td>
+            <td>2017</td>
+            <td>Micrograms/cubic meter (25 C)</td>
+            <td>Concurred Events Excluded</td>
+            <td>5629</td>
+            <td>64.0</td>
+            <td>N</td>
+            <td>227</td>
+            <td>365</td>
+            <td>5629</td>
+            <td>643</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>26.632794</td>
+            <td>24.335395</td>
+            <td>745.000</td>
+            <td>2017-10-08 16:00:00+00:00</td>
+            <td>503.000</td>
+            <td>2017-12-20 14:00:00+00:00</td>
+            <td>435.000</td>
+            <td>2017-06-24 14:00:00+00:00</td>
+            <td>418.000</td>
+            <td>2017-10-08 15:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>102.000</td>
+            <td>78.000</td>
+            <td>60.000</td>
+            <td>48.000</td>
+            <td>33.000</td>
+            <td>22.000</td>
+            <td>9.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2021-03-12</td>
+            </tr>
+            <tr>
+            <th>55</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>61105</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Peak Wind Gust</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - SPOT READING</td>
+            <td>2017</td>
+            <td>Knots</td>
+            <td>No Events</td>
+            <td>8732</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>363</td>
+            <td>365</td>
+            <td>0</td>
+            <td>12</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>8.676363</td>
+            <td>5.827075</td>
+            <td>43.000</td>
+            <td>2017-12-20 13:00:00+00:00</td>
+            <td>41.000</td>
+            <td>2017-10-08 17:00:00+00:00</td>
+            <td>40.000</td>
+            <td>2017-02-09 14:00:00+00:00</td>
+            <td>40.000</td>
+            <td>2017-03-30 13:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>29.000</td>
+            <td>26.000</td>
+            <td>22.000</td>
+            <td>17.000</td>
+            <td>11.000</td>
+            <td>7.000</td>
+            <td>4.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>56</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>61105</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Peak Wind Gust</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - SPOT READING</td>
+            <td>2007</td>
+            <td>Knots</td>
+            <td>No Events</td>
+            <td>8710</td>
+            <td>99.0</td>
+            <td>Y</td>
+            <td>362</td>
+            <td>365</td>
+            <td>0</td>
+            <td>5</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>9.715614</td>
+            <td>6.222651</td>
+            <td>39.000</td>
+            <td>2007-02-25 13:00:00+00:00</td>
+            <td>39.000</td>
+            <td>2007-06-05 17:00:00+00:00</td>
+            <td>39.000</td>
+            <td>2007-06-06 17:00:00+00:00</td>
+            <td>38.000</td>
+            <td>2007-01-10 18:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>29.000</td>
+            <td>26.000</td>
+            <td>23.000</td>
+            <td>19.000</td>
+            <td>13.000</td>
+            <td>8.000</td>
+            <td>4.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>57</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>44201</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Ozone</td>
+            <td>8-HR RUN AVG BEGIN HOUR</td>
+            <td>Ozone 8-Hour 1997</td>
+            <td>Daily maximum of 8 hour running average of observed hourly values</td>
+            <td>NaN</td>
+            <td>2019</td>
+            <td>Parts per million</td>
+            <td>Events Included</td>
+            <td>6848</td>
+            <td>76.0</td>
+            <td>Y</td>
+            <td>278</td>
+            <td>365</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>0.031558</td>
+            <td>0.009776</td>
+            <td>0.054</td>
+            <td>2019-06-17 09:00:00+00:00</td>
+            <td>0.053</td>
+            <td>2019-06-16 12:00:00+00:00</td>
+            <td>0.052</td>
+            <td>2019-06-03 12:00:00+00:00</td>
+            <td>0.052</td>
+            <td>2019-06-04 10:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>0.052</td>
+            <td>0.051</td>
+            <td>0.048</td>
+            <td>0.044</td>
+            <td>0.039</td>
+            <td>0.031</td>
+            <td>0.018</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2021-03-12</td>
+            </tr>
+            <tr>
+            <th>58</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>88500</td>
+            <td>3</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>PM2.5 Total Atmospheric</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>PM2.5 VSCC - FDMS-Gravimetric</td>
+            <td>2017</td>
+            <td>Micrograms/cubic meter (LC)</td>
+            <td>No Events</td>
+            <td>7589</td>
+            <td>87.0</td>
+            <td>Y</td>
+            <td>311</td>
+            <td>365</td>
+            <td>0</td>
+            <td>1154</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>7.609711</td>
+            <td>9.204663</td>
+            <td>87.000</td>
+            <td>2017-09-02 19:00:00+00:00</td>
+            <td>82.000</td>
+            <td>2017-12-30 19:00:00+00:00</td>
+            <td>78.700</td>
+            <td>2017-12-31 22:00:00+00:00</td>
+            <td>78.000</td>
+            <td>2017-12-22 20:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>44.800</td>
+            <td>37.400</td>
+            <td>26.000</td>
+            <td>17.600</td>
+            <td>9.600</td>
+            <td>5.100</td>
+            <td>0.300</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-07-22</td>
+            </tr>
+            <tr>
+            <th>59</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>62101</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Outdoor Temperature</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ELECTRONIC OR MACHINE AVG.</td>
+            <td>2016</td>
+            <td>Degrees Fahrenheit</td>
+            <td>No Events</td>
+            <td>8755</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>364</td>
+            <td>366</td>
+            <td>0</td>
+            <td>22</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>58.867733</td>
+            <td>17.611672</td>
+            <td>102.000</td>
+            <td>2016-07-27 14:00:00+00:00</td>
+            <td>102.000</td>
+            <td>2016-07-28 13:00:00+00:00</td>
+            <td>101.000</td>
+            <td>2016-07-27 13:00:00+00:00</td>
+            <td>100.000</td>
+            <td>2016-07-23 15:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>96.000</td>
+            <td>94.000</td>
+            <td>90.000</td>
+            <td>84.000</td>
+            <td>71.000</td>
+            <td>59.000</td>
+            <td>36.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>60</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>85101</td>
+            <td>4</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>PM10 - LC</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL-R&amp;P SA246B-INLET - TEOM-GRAVIMETRIC</td>
+            <td>2015</td>
+            <td>Micrograms/cubic meter (LC)</td>
+            <td>Concurred Events Excluded</td>
+            <td>2061</td>
+            <td>93.0</td>
+            <td>Y</td>
+            <td>82</td>
+            <td>92</td>
+            <td>2061</td>
+            <td>144</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>19.043183</td>
+            <td>19.961676</td>
+            <td>217.000</td>
+            <td>2015-12-11 12:00:00+00:00</td>
+            <td>204.000</td>
+            <td>2015-12-02 17:00:00+00:00</td>
+            <td>159.000</td>
+            <td>2015-11-30 17:00:00+00:00</td>
+            <td>157.000</td>
+            <td>2015-12-10 08:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>102.000</td>
+            <td>80.000</td>
+            <td>59.000</td>
+            <td>43.000</td>
+            <td>22.000</td>
+            <td>12.000</td>
+            <td>5.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>61</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>62201</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Relative Humidity</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - HYGROTHERMOGRAPH ELEC OR MACH AVG</td>
+            <td>2005</td>
+            <td>Percent relative humidity</td>
+            <td>No Events</td>
+            <td>8735</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>365</td>
+            <td>365</td>
+            <td>0</td>
+            <td>19</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>40.260446</td>
+            <td>22.676947</td>
+            <td>100.000</td>
+            <td>2005-01-03 00:00:00+00:00</td>
+            <td>100.000</td>
+            <td>2005-01-04 06:00:00+00:00</td>
+            <td>100.000</td>
+            <td>2005-01-04 07:00:00+00:00</td>
+            <td>100.000</td>
+            <td>2005-02-13 03:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>97.000</td>
+            <td>95.000</td>
+            <td>88.000</td>
+            <td>75.000</td>
+            <td>54.000</td>
+            <td>35.000</td>
+            <td>14.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>62</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>61104</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Wind Direction - Resultant</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - VECTOR SUMMATION</td>
+            <td>2013</td>
+            <td>Degrees Compass</td>
+            <td>No Events</td>
+            <td>8757</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>365</td>
+            <td>365</td>
+            <td>0</td>
+            <td>3</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>231.625100</td>
+            <td>105.431713</td>
+            <td>360.000</td>
+            <td>2013-01-10 16:00:00+00:00</td>
+            <td>360.000</td>
+            <td>2013-01-13 20:00:00+00:00</td>
+            <td>360.000</td>
+            <td>2013-02-08 21:00:00+00:00</td>
+            <td>360.000</td>
+            <td>2013-02-20 02:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>358.000</td>
+            <td>355.000</td>
+            <td>348.000</td>
+            <td>338.000</td>
+            <td>315.000</td>
+            <td>282.000</td>
+            <td>55.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>63</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>61101</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Wind Speed - Scalar</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ELECTRONIC OR MACHINE AVG.</td>
+            <td>2016</td>
+            <td>Knots</td>
+            <td>No Events</td>
+            <td>8754</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>365</td>
+            <td>366</td>
+            <td>0</td>
+            <td>23</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>3.942209</td>
+            <td>2.668294</td>
+            <td>25.000</td>
+            <td>2016-12-15 05:00:00+00:00</td>
+            <td>24.100</td>
+            <td>2016-12-15 04:00:00+00:00</td>
+            <td>23.000</td>
+            <td>2016-03-11 13:00:00+00:00</td>
+            <td>22.000</td>
+            <td>2016-03-11 14:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>13.100</td>
+            <td>11.900</td>
+            <td>9.700</td>
+            <td>7.800</td>
+            <td>4.700</td>
+            <td>3.000</td>
+            <td>1.700</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>64</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>62101</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Outdoor Temperature</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ELECTRONIC OR MACHINE AVG.</td>
+            <td>2015</td>
+            <td>Degrees Fahrenheit</td>
+            <td>No Events</td>
+            <td>8730</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>364</td>
+            <td>365</td>
+            <td>0</td>
+            <td>27</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>59.053036</td>
+            <td>17.345176</td>
+            <td>102.000</td>
+            <td>2015-06-20 15:00:00+00:00</td>
+            <td>101.000</td>
+            <td>2015-06-20 14:00:00+00:00</td>
+            <td>101.000</td>
+            <td>2015-06-20 16:00:00+00:00</td>
+            <td>100.000</td>
+            <td>2015-06-19 15:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>95.000</td>
+            <td>93.000</td>
+            <td>89.000</td>
+            <td>83.000</td>
+            <td>71.000</td>
+            <td>59.000</td>
+            <td>36.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>65</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>61106</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Std Dev Hz Wind Direction</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ARITHMETIC STANDARD DEVIATION</td>
+            <td>2011</td>
+            <td>Degrees Compass</td>
+            <td>No Events</td>
+            <td>8558</td>
+            <td>98.0</td>
+            <td>Y</td>
+            <td>355</td>
+            <td>365</td>
+            <td>0</td>
+            <td>16</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>33.493772</td>
+            <td>15.509698</td>
+            <td>80.500</td>
+            <td>2011-11-25 16:00:00+00:00</td>
+            <td>79.800</td>
+            <td>2011-03-06 21:00:00+00:00</td>
+            <td>79.600</td>
+            <td>2011-01-21 13:00:00+00:00</td>
+            <td>79.600</td>
+            <td>2011-02-24 23:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>73.000</td>
+            <td>70.400</td>
+            <td>63.800</td>
+            <td>56.900</td>
+            <td>43.800</td>
+            <td>30.000</td>
+            <td>16.300</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>66</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>81102</td>
+            <td>4</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>PM10 Total 0-10um STP</td>
+            <td>24-HR BLK AVG</td>
+            <td>PM10 24-hour 2006</td>
+            <td>Daily Mean</td>
+            <td>NaN</td>
+            <td>2014</td>
+            <td>Micrograms/cubic meter (25 C)</td>
+            <td>Events Included</td>
+            <td>273</td>
+            <td>75.0</td>
+            <td>N</td>
+            <td>273</td>
+            <td>365</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>16.652015</td>
+            <td>9.432801</td>
+            <td>86.000</td>
+            <td>2014-06-18 00:00:00+00:00</td>
+            <td>62.000</td>
+            <td>2014-09-19 00:00:00+00:00</td>
+            <td>51.000</td>
+            <td>2014-08-02 00:00:00+00:00</td>
+            <td>46.000</td>
+            <td>2014-08-01 00:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>51.000</td>
+            <td>42.000</td>
+            <td>32.000</td>
+            <td>27.000</td>
+            <td>20.000</td>
+            <td>15.000</td>
+            <td>7.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2021-03-12</td>
+            </tr>
+            <tr>
+            <th>67</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>64101</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Barometric pressure</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ANEROID</td>
+            <td>2012</td>
+            <td>Millibars</td>
+            <td>No Events</td>
+            <td>8608</td>
+            <td>98.0</td>
+            <td>Y</td>
+            <td>358</td>
+            <td>366</td>
+            <td>0</td>
+            <td>4</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>874.160200</td>
+            <td>5.361998</td>
+            <td>889.000</td>
+            <td>2012-01-04 07:00:00+00:00</td>
+            <td>889.000</td>
+            <td>2012-01-04 08:00:00+00:00</td>
+            <td>889.000</td>
+            <td>2012-01-04 09:00:00+00:00</td>
+            <td>888.000</td>
+            <td>2012-01-01 08:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>887.000</td>
+            <td>886.000</td>
+            <td>883.000</td>
+            <td>881.000</td>
+            <td>878.000</td>
+            <td>874.000</td>
+            <td>867.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>68</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>81102</td>
+            <td>4</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>PM10 Total 0-10um STP</td>
+            <td>24-HR BLK AVG</td>
+            <td>PM10 24-hour 2006</td>
+            <td>Daily Mean</td>
+            <td>NaN</td>
+            <td>2012</td>
+            <td>Micrograms/cubic meter (25 C)</td>
+            <td>Events Included</td>
+            <td>303</td>
+            <td>83.0</td>
+            <td>N</td>
+            <td>303</td>
+            <td>366</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>20.495050</td>
+            <td>10.191826</td>
+            <td>80.000</td>
+            <td>2012-05-14 00:00:00+00:00</td>
+            <td>69.000</td>
+            <td>2012-03-06 00:00:00+00:00</td>
+            <td>56.000</td>
+            <td>2012-01-18 00:00:00+00:00</td>
+            <td>56.000</td>
+            <td>2012-01-19 00:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>56.000</td>
+            <td>45.000</td>
+            <td>39.000</td>
+            <td>33.000</td>
+            <td>24.000</td>
+            <td>19.000</td>
+            <td>10.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2021-03-12</td>
+            </tr>
+            <tr>
+            <th>69</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>61103</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Wind Speed - Resultant</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - VECTOR SUMMATION</td>
+            <td>2007</td>
+            <td>Knots</td>
+            <td>No Events</td>
+            <td>8710</td>
+            <td>99.0</td>
+            <td>Y</td>
+            <td>362</td>
+            <td>365</td>
+            <td>0</td>
+            <td>5</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>3.599805</td>
+            <td>2.773962</td>
+            <td>17.800</td>
+            <td>2007-02-22 11:00:00+00:00</td>
+            <td>17.500</td>
+            <td>2007-03-19 15:00:00+00:00</td>
+            <td>17.500</td>
+            <td>2007-06-05 16:00:00+00:00</td>
+            <td>16.700</td>
+            <td>2007-01-11 17:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>12.600</td>
+            <td>11.300</td>
+            <td>9.600</td>
+            <td>7.700</td>
+            <td>4.800</td>
+            <td>2.600</td>
+            <td>1.100</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>70</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>62101</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Outdoor Temperature</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ELECTRONIC OR MACHINE AVG.</td>
+            <td>2007</td>
+            <td>Degrees Fahrenheit</td>
+            <td>No Events</td>
+            <td>8710</td>
+            <td>99.0</td>
+            <td>Y</td>
+            <td>362</td>
+            <td>365</td>
+            <td>0</td>
+            <td>5</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>58.393915</td>
+            <td>18.516571</td>
+            <td>104.000</td>
+            <td>2007-07-05 15:00:00+00:00</td>
+            <td>103.000</td>
+            <td>2007-07-05 13:00:00+00:00</td>
+            <td>103.000</td>
+            <td>2007-07-05 14:00:00+00:00</td>
+            <td>102.000</td>
+            <td>2007-07-04 14:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>95.000</td>
+            <td>94.000</td>
+            <td>90.000</td>
+            <td>84.000</td>
+            <td>72.000</td>
+            <td>58.000</td>
+            <td>34.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>71</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>62101</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Outdoor Temperature</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ELECTRONIC OR MACHINE AVG.</td>
+            <td>2019</td>
+            <td>Degrees Fahrenheit</td>
+            <td>No Events</td>
+            <td>8683</td>
+            <td>99.0</td>
+            <td>Y</td>
+            <td>360</td>
+            <td>365</td>
+            <td>0</td>
+            <td>5</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>56.045837</td>
+            <td>17.782458</td>
+            <td>98.000</td>
+            <td>2019-07-28 15:00:00+00:00</td>
+            <td>97.000</td>
+            <td>2019-07-28 14:00:00+00:00</td>
+            <td>97.000</td>
+            <td>2019-07-28 16:00:00+00:00</td>
+            <td>97.000</td>
+            <td>2019-08-26 14:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>94.000</td>
+            <td>92.000</td>
+            <td>88.000</td>
+            <td>82.000</td>
+            <td>69.000</td>
+            <td>55.000</td>
+            <td>34.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>72</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>81102</td>
+            <td>4</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>PM10 Total 0-10um STP</td>
+            <td>24-HR BLK AVG</td>
+            <td>PM10 24-hour 2006</td>
+            <td>Daily Mean</td>
+            <td>NaN</td>
+            <td>2005</td>
+            <td>Micrograms/cubic meter (25 C)</td>
+            <td>Events Included</td>
+            <td>363</td>
+            <td>99.0</td>
+            <td>Y</td>
+            <td>363</td>
+            <td>365</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>17.834711</td>
+            <td>9.683397</td>
+            <td>54.000</td>
+            <td>2005-06-25 00:00:00+00:00</td>
+            <td>53.000</td>
+            <td>2005-06-16 00:00:00+00:00</td>
+            <td>50.000</td>
+            <td>2005-07-13 00:00:00+00:00</td>
+            <td>47.000</td>
+            <td>2005-04-07 00:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>47.000</td>
+            <td>44.000</td>
+            <td>37.000</td>
+            <td>32.000</td>
+            <td>23.000</td>
+            <td>16.000</td>
+            <td>7.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2021-03-12</td>
+            </tr>
+            <tr>
+            <th>73</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>65102</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Rain/melt precipitation</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>TIPPING BUCKET - METONE 8 HEATD RAIN GAUGE 375</td>
+            <td>2009</td>
+            <td>Inches (rainfall)</td>
+            <td>No Events</td>
+            <td>8749</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>365</td>
+            <td>365</td>
+            <td>0</td>
+            <td>11</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>0.000383</td>
+            <td>0.008548</td>
+            <td>0.460</td>
+            <td>2009-10-13 18:00:00+00:00</td>
+            <td>0.350</td>
+            <td>2009-10-13 19:00:00+00:00</td>
+            <td>0.340</td>
+            <td>2009-10-13 17:00:00+00:00</td>
+            <td>0.160</td>
+            <td>2009-07-20 15:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>0.000</td>
+            <td>0.000</td>
+            <td>0.000</td>
+            <td>0.000</td>
+            <td>0.000</td>
+            <td>0.000</td>
+            <td>0.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>74</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>63301</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Solar radiation</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - PYRANOMETER</td>
+            <td>2007</td>
+            <td>Langleys/minute</td>
+            <td>No Events</td>
+            <td>8710</td>
+            <td>99.0</td>
+            <td>Y</td>
+            <td>362</td>
+            <td>365</td>
+            <td>0</td>
+            <td>5</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>0.320280</td>
+            <td>0.427862</td>
+            <td>1.430</td>
+            <td>2007-08-01 12:00:00+00:00</td>
+            <td>1.420</td>
+            <td>2007-04-21 12:00:00+00:00</td>
+            <td>1.420</td>
+            <td>2007-05-04 11:00:00+00:00</td>
+            <td>1.420</td>
+            <td>2007-06-07 11:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>1.350</td>
+            <td>1.320</td>
+            <td>1.220</td>
+            <td>1.050</td>
+            <td>0.640</td>
+            <td>0.010</td>
+            <td>0.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>75</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>64101</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Barometric pressure</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ANEROID</td>
+            <td>2007</td>
+            <td>Millibars</td>
+            <td>No Events</td>
+            <td>8710</td>
+            <td>99.0</td>
+            <td>Y</td>
+            <td>362</td>
+            <td>365</td>
+            <td>0</td>
+            <td>5</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>874.104478</td>
+            <td>5.446626</td>
+            <td>892.000</td>
+            <td>2007-01-08 07:00:00+00:00</td>
+            <td>892.000</td>
+            <td>2007-01-08 08:00:00+00:00</td>
+            <td>892.000</td>
+            <td>2007-10-22 23:00:00+00:00</td>
+            <td>891.000</td>
+            <td>2007-01-07 07:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>888.000</td>
+            <td>887.000</td>
+            <td>884.000</td>
+            <td>882.000</td>
+            <td>877.000</td>
+            <td>874.000</td>
+            <td>868.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>76</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>61105</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Peak Wind Gust</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - SPOT READING</td>
+            <td>2008</td>
+            <td>Knots</td>
+            <td>No Events</td>
+            <td>8776</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>365</td>
+            <td>366</td>
+            <td>0</td>
+            <td>8</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>9.448154</td>
+            <td>6.413806</td>
+            <td>51.000</td>
+            <td>2008-08-31 15:00:00+00:00</td>
+            <td>48.000</td>
+            <td>2008-02-13 15:00:00+00:00</td>
+            <td>42.000</td>
+            <td>2008-01-27 13:00:00+00:00</td>
+            <td>42.000</td>
+            <td>2008-06-29 13:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>30.000</td>
+            <td>28.000</td>
+            <td>23.000</td>
+            <td>19.000</td>
+            <td>12.000</td>
+            <td>7.000</td>
+            <td>4.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>77</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>64101</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Barometric pressure</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ANEROID</td>
+            <td>2010</td>
+            <td>Millibars</td>
+            <td>No Events</td>
+            <td>8741</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>363</td>
+            <td>365</td>
+            <td>0</td>
+            <td>13</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>873.239446</td>
+            <td>5.756718</td>
+            <td>890.000</td>
+            <td>2010-11-02 03:00:00+00:00</td>
+            <td>890.000</td>
+            <td>2010-11-02 04:00:00+00:00</td>
+            <td>890.000</td>
+            <td>2010-11-02 05:00:00+00:00</td>
+            <td>890.000</td>
+            <td>2010-11-02 06:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>886.000</td>
+            <td>885.000</td>
+            <td>883.000</td>
+            <td>881.000</td>
+            <td>877.000</td>
+            <td>873.000</td>
+            <td>866.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>78</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>61104</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Wind Direction - Resultant</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - VECTOR SUMMATION</td>
+            <td>2015</td>
+            <td>Degrees Compass</td>
+            <td>No Events</td>
+            <td>8707</td>
+            <td>99.0</td>
+            <td>Y</td>
+            <td>362</td>
+            <td>365</td>
+            <td>0</td>
+            <td>50</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>226.377972</td>
+            <td>104.198295</td>
+            <td>360.000</td>
+            <td>2015-01-12 19:00:00+00:00</td>
+            <td>360.000</td>
+            <td>2015-02-15 11:00:00+00:00</td>
+            <td>360.000</td>
+            <td>2015-02-18 08:00:00+00:00</td>
+            <td>360.000</td>
+            <td>2015-02-20 13:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>357.000</td>
+            <td>354.000</td>
+            <td>346.000</td>
+            <td>335.000</td>
+            <td>310.000</td>
+            <td>276.000</td>
+            <td>60.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>79</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>88500</td>
+            <td>3</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>PM2.5 Total Atmospheric</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>PM2.5 VSCC - FDMS-Gravimetric</td>
+            <td>2009</td>
+            <td>Micrograms/cubic meter (LC)</td>
+            <td>No Events</td>
+            <td>8610</td>
+            <td>98.0</td>
+            <td>Y</td>
+            <td>357</td>
+            <td>365</td>
+            <td>0</td>
+            <td>147</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>7.720906</td>
+            <td>8.495394</td>
+            <td>87.000</td>
+            <td>2009-12-10 21:00:00+00:00</td>
+            <td>84.000</td>
+            <td>2009-12-26 21:00:00+00:00</td>
+            <td>82.000</td>
+            <td>2009-12-10 19:00:00+00:00</td>
+            <td>76.000</td>
+            <td>2009-12-26 22:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>44.000</td>
+            <td>36.000</td>
+            <td>24.000</td>
+            <td>16.000</td>
+            <td>9.000</td>
+            <td>5.000</td>
+            <td>1.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-07-22</td>
+            </tr>
+            <tr>
+            <th>80</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>64101</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Barometric pressure</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ANEROID</td>
+            <td>2013</td>
+            <td>Millibars</td>
+            <td>No Events</td>
+            <td>8758</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>365</td>
+            <td>365</td>
+            <td>0</td>
+            <td>2</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>874.961978</td>
+            <td>5.786309</td>
+            <td>891.000</td>
+            <td>2013-03-01 05:00:00+00:00</td>
+            <td>891.000</td>
+            <td>2013-03-01 06:00:00+00:00</td>
+            <td>890.000</td>
+            <td>2013-01-16 02:00:00+00:00</td>
+            <td>890.000</td>
+            <td>2013-03-01 00:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>888.000</td>
+            <td>887.000</td>
+            <td>885.000</td>
+            <td>883.000</td>
+            <td>879.000</td>
+            <td>874.000</td>
+            <td>868.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>81</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>64101</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Barometric pressure</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ANEROID</td>
+            <td>2014</td>
+            <td>Millibars</td>
+            <td>No Events</td>
+            <td>8730</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>363</td>
+            <td>365</td>
+            <td>0</td>
+            <td>3</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>874.737572</td>
+            <td>5.183269</td>
+            <td>893.000</td>
+            <td>2014-01-14 08:00:00+00:00</td>
+            <td>892.000</td>
+            <td>2014-01-14 04:00:00+00:00</td>
+            <td>892.000</td>
+            <td>2014-01-14 05:00:00+00:00</td>
+            <td>892.000</td>
+            <td>2014-01-14 06:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>888.000</td>
+            <td>886.000</td>
+            <td>884.000</td>
+            <td>882.000</td>
+            <td>878.000</td>
+            <td>874.000</td>
+            <td>868.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>82</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>63301</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Solar radiation</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - PYRANOMETER</td>
+            <td>2005</td>
+            <td>Langleys/minute</td>
+            <td>No Events</td>
+            <td>8735</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>365</td>
+            <td>365</td>
+            <td>0</td>
+            <td>19</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>0.317436</td>
+            <td>0.429028</td>
+            <td>1.590</td>
+            <td>2005-04-30 12:00:00+00:00</td>
+            <td>1.440</td>
+            <td>2005-04-03 11:00:00+00:00</td>
+            <td>1.430</td>
+            <td>2005-05-18 11:00:00+00:00</td>
+            <td>1.420</td>
+            <td>2005-04-03 12:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>1.350</td>
+            <td>1.310</td>
+            <td>1.220</td>
+            <td>1.060</td>
+            <td>0.630</td>
+            <td>0.010</td>
+            <td>0.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>83</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>62201</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Relative Humidity</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - HYGROTHERMOGRAPH ELEC OR MACH AVG</td>
+            <td>2008</td>
+            <td>Percent relative humidity</td>
+            <td>No Events</td>
+            <td>8776</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>365</td>
+            <td>366</td>
+            <td>0</td>
+            <td>8</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>33.826914</td>
+            <td>19.872334</td>
+            <td>97.000</td>
+            <td>2008-02-03 03:00:00+00:00</td>
+            <td>97.000</td>
+            <td>2008-02-03 04:00:00+00:00</td>
+            <td>97.000</td>
+            <td>2008-02-03 05:00:00+00:00</td>
+            <td>96.000</td>
+            <td>2008-01-05 23:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>92.000</td>
+            <td>88.000</td>
+            <td>75.000</td>
+            <td>62.000</td>
+            <td>45.000</td>
+            <td>29.000</td>
+            <td>12.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>84</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>44201</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Ozone</td>
+            <td>1 HOUR</td>
+            <td>Ozone 1-hour 1979</td>
+            <td>Daily maxima of observed hourly values (between 9:00 AM and 8:00 PM)</td>
+            <td>INSTRUMENTAL - ULTRA VIOLET</td>
+            <td>2017</td>
+            <td>Parts per million</td>
+            <td>Events Included</td>
+            <td>8466</td>
+            <td>96.0</td>
+            <td>Y</td>
+            <td>351</td>
+            <td>365</td>
+            <td>8466</td>
+            <td>254</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>0.031154</td>
+            <td>0.010126</td>
+            <td>0.063</td>
+            <td>2017-05-12 18:00:00+00:00</td>
+            <td>0.058</td>
+            <td>2017-05-13 15:00:00+00:00</td>
+            <td>0.055</td>
+            <td>2017-05-11 16:00:00+00:00</td>
+            <td>0.055</td>
+            <td>2017-05-26 15:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>0.055</td>
+            <td>0.051</td>
+            <td>0.045</td>
+            <td>0.043</td>
+            <td>0.039</td>
+            <td>0.032</td>
+            <td>0.017</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2021-03-12</td>
+            </tr>
+            <tr>
+            <th>85</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>61103</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Wind Speed - Resultant</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - VECTOR SUMMATION</td>
+            <td>2012</td>
+            <td>Knots</td>
+            <td>No Events</td>
+            <td>8602</td>
+            <td>98.0</td>
+            <td>Y</td>
+            <td>357</td>
+            <td>366</td>
+            <td>0</td>
+            <td>10</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>3.577261</td>
+            <td>3.172455</td>
+            <td>26.000</td>
+            <td>2012-04-10 16:00:00+00:00</td>
+            <td>25.400</td>
+            <td>2012-03-24 13:00:00+00:00</td>
+            <td>25.400</td>
+            <td>2012-03-24 14:00:00+00:00</td>
+            <td>24.000</td>
+            <td>2012-03-24 15:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>14.800</td>
+            <td>12.900</td>
+            <td>10.100</td>
+            <td>8.000</td>
+            <td>4.600</td>
+            <td>2.300</td>
+            <td>1.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>86</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>63301</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Solar radiation</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - PYRANOMETER</td>
+            <td>2013</td>
+            <td>Langleys/minute</td>
+            <td>No Events</td>
+            <td>8757</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>365</td>
+            <td>365</td>
+            <td>0</td>
+            <td>3</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>0.328932</td>
+            <td>0.443655</td>
+            <td>1.520</td>
+            <td>2013-06-10 12:00:00+00:00</td>
+            <td>1.510</td>
+            <td>2013-06-09 11:00:00+00:00</td>
+            <td>1.490</td>
+            <td>2013-05-06 11:00:00+00:00</td>
+            <td>1.480</td>
+            <td>2013-06-13 11:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>1.410</td>
+            <td>1.380</td>
+            <td>1.260</td>
+            <td>1.090</td>
+            <td>0.640</td>
+            <td>0.010</td>
+            <td>0.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>87</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>81102</td>
+            <td>4</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>PM10 Total 0-10um STP</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL-R&amp;P SA246B-INLET - TEOM-GRAVIMETRIC</td>
+            <td>2005</td>
+            <td>Micrograms/cubic meter (25 C)</td>
+            <td>Concurred Events Excluded</td>
+            <td>8673</td>
+            <td>99.0</td>
+            <td>Y</td>
+            <td>363</td>
+            <td>365</td>
+            <td>8673</td>
+            <td>81</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>18.285022</td>
+            <td>20.759649</td>
+            <td>550.000</td>
+            <td>2005-06-25 11:00:00+00:00</td>
+            <td>339.000</td>
+            <td>2005-06-16 15:00:00+00:00</td>
+            <td>327.000</td>
+            <td>2005-11-23 21:00:00+00:00</td>
+            <td>309.000</td>
+            <td>2005-10-15 14:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>90.000</td>
+            <td>72.000</td>
+            <td>50.000</td>
+            <td>37.000</td>
+            <td>23.000</td>
+            <td>14.000</td>
+            <td>3.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2021-03-12</td>
+            </tr>
+            <tr>
+            <th>88</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>61103</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Wind Speed - Resultant</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - VECTOR SUMMATION</td>
+            <td>2018</td>
+            <td>Knots</td>
+            <td>No Events</td>
+            <td>8717</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>363</td>
+            <td>365</td>
+            <td>0</td>
+            <td>33</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>3.060181</td>
+            <td>2.467800</td>
+            <td>21.400</td>
+            <td>2018-11-21 17:00:00+00:00</td>
+            <td>18.500</td>
+            <td>2018-07-10 22:00:00+00:00</td>
+            <td>18.400</td>
+            <td>2018-03-13 10:00:00+00:00</td>
+            <td>17.800</td>
+            <td>2018-03-16 10:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>11.900</td>
+            <td>10.600</td>
+            <td>8.300</td>
+            <td>6.500</td>
+            <td>3.700</td>
+            <td>2.300</td>
+            <td>1.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>89</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>61103</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Wind Speed - Resultant</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - VECTOR SUMMATION</td>
+            <td>2013</td>
+            <td>Knots</td>
+            <td>No Events</td>
+            <td>8757</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>365</td>
+            <td>365</td>
+            <td>0</td>
+            <td>3</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>3.550177</td>
+            <td>2.772144</td>
+            <td>21.600</td>
+            <td>2013-03-05 10:00:00+00:00</td>
+            <td>20.000</td>
+            <td>2013-05-05 15:00:00+00:00</td>
+            <td>18.100</td>
+            <td>2013-05-14 16:00:00+00:00</td>
+            <td>17.700</td>
+            <td>2013-03-05 12:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>12.400</td>
+            <td>11.200</td>
+            <td>9.600</td>
+            <td>7.800</td>
+            <td>4.600</td>
+            <td>2.600</td>
+            <td>1.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>90</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>88500</td>
+            <td>3</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>PM2.5 Total Atmospheric</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>PM2.5 VSCC - FDMS-Gravimetric</td>
+            <td>2013</td>
+            <td>Micrograms/cubic meter (LC)</td>
+            <td>No Events</td>
+            <td>7446</td>
+            <td>85.0</td>
+            <td>Y</td>
+            <td>311</td>
+            <td>365</td>
+            <td>0</td>
+            <td>1297</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>6.493151</td>
+            <td>7.130324</td>
+            <td>75.000</td>
+            <td>2013-01-01 01:00:00+00:00</td>
+            <td>72.000</td>
+            <td>2013-01-05 21:00:00+00:00</td>
+            <td>68.000</td>
+            <td>2013-05-05 11:00:00+00:00</td>
+            <td>67.000</td>
+            <td>2013-01-04 18:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>34.000</td>
+            <td>28.000</td>
+            <td>20.000</td>
+            <td>15.000</td>
+            <td>8.000</td>
+            <td>5.000</td>
+            <td>1.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-07-22</td>
+            </tr>
+            <tr>
+            <th>91</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>65102</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Rain/melt precipitation</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>TIPPING BUCKET - METONE 8 HEATD RAIN GAUGE 375</td>
+            <td>2012</td>
+            <td>Inches (rainfall)</td>
+            <td>No Events</td>
+            <td>8602</td>
+            <td>98.0</td>
+            <td>Y</td>
+            <td>358</td>
+            <td>366</td>
+            <td>0</td>
+            <td>10</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>0.000191</td>
+            <td>0.004287</td>
+            <td>0.220</td>
+            <td>2012-01-21 04:00:00+00:00</td>
+            <td>0.140</td>
+            <td>2012-01-21 02:00:00+00:00</td>
+            <td>0.110</td>
+            <td>2012-01-21 03:00:00+00:00</td>
+            <td>0.110</td>
+            <td>2012-10-11 08:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>0.000</td>
+            <td>0.000</td>
+            <td>0.000</td>
+            <td>0.000</td>
+            <td>0.000</td>
+            <td>0.000</td>
+            <td>0.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>92</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>61101</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Wind Speed - Scalar</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ELECTRONIC OR MACHINE AVG.</td>
+            <td>2007</td>
+            <td>Knots</td>
+            <td>No Events</td>
+            <td>8710</td>
+            <td>99.0</td>
+            <td>Y</td>
+            <td>362</td>
+            <td>365</td>
+            <td>0</td>
+            <td>5</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>4.276096</td>
+            <td>2.723690</td>
+            <td>18.200</td>
+            <td>2007-06-05 16:00:00+00:00</td>
+            <td>18.100</td>
+            <td>2007-02-22 11:00:00+00:00</td>
+            <td>18.000</td>
+            <td>2007-01-11 17:00:00+00:00</td>
+            <td>18.000</td>
+            <td>2007-03-19 15:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>13.500</td>
+            <td>12.000</td>
+            <td>10.200</td>
+            <td>8.300</td>
+            <td>5.400</td>
+            <td>3.300</td>
+            <td>1.900</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>93</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>64101</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Barometric pressure</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ANEROID</td>
+            <td>2018</td>
+            <td>Millibars</td>
+            <td>No Events</td>
+            <td>8730</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>364</td>
+            <td>365</td>
+            <td>0</td>
+            <td>20</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>873.215808</td>
+            <td>5.204594</td>
+            <td>890.000</td>
+            <td>2018-01-28 06:00:00+00:00</td>
+            <td>889.000</td>
+            <td>2018-01-27 22:00:00+00:00</td>
+            <td>889.000</td>
+            <td>2018-01-28 00:00:00+00:00</td>
+            <td>889.000</td>
+            <td>2018-01-28 07:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>885.000</td>
+            <td>884.000</td>
+            <td>882.000</td>
+            <td>880.000</td>
+            <td>877.000</td>
+            <td>873.000</td>
+            <td>866.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>94</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>63301</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Solar radiation</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - PYRANOMETER</td>
+            <td>2008</td>
+            <td>Langleys/minute</td>
+            <td>No Events</td>
+            <td>8776</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>365</td>
+            <td>366</td>
+            <td>0</td>
+            <td>8</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>0.324331</td>
+            <td>0.433236</td>
+            <td>1.480</td>
+            <td>2008-07-15 11:00:00+00:00</td>
+            <td>1.470</td>
+            <td>2008-05-24 11:00:00+00:00</td>
+            <td>1.470</td>
+            <td>2008-05-26 10:00:00+00:00</td>
+            <td>1.430</td>
+            <td>2008-05-29 11:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>1.350</td>
+            <td>1.320</td>
+            <td>1.230</td>
+            <td>1.080</td>
+            <td>0.640</td>
+            <td>0.010</td>
+            <td>0.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>95</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>81102</td>
+            <td>4</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>PM10 Total 0-10um STP</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL-R&amp;P SA246B-INLET - TEOM-GRAVIMETRIC</td>
+            <td>2014</td>
+            <td>Micrograms/cubic meter (25 C)</td>
+            <td>Concurred Events Excluded</td>
+            <td>6640</td>
+            <td>76.0</td>
+            <td>Y</td>
+            <td>273</td>
+            <td>365</td>
+            <td>6640</td>
+            <td>2093</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>17.139910</td>
+            <td>19.822860</td>
+            <td>421.000</td>
+            <td>2014-06-17 23:00:00+00:00</td>
+            <td>337.000</td>
+            <td>2014-06-18 00:00:00+00:00</td>
+            <td>287.000</td>
+            <td>2014-06-18 01:00:00+00:00</td>
+            <td>213.000</td>
+            <td>2014-06-18 02:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>87.000</td>
+            <td>70.000</td>
+            <td>50.000</td>
+            <td>36.000</td>
+            <td>22.000</td>
+            <td>13.000</td>
+            <td>1.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2021-03-12</td>
+            </tr>
+            <tr>
+            <th>96</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>63301</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Solar radiation</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - PYRANOMETER</td>
+            <td>2009</td>
+            <td>Langleys/minute</td>
+            <td>No Events</td>
+            <td>8759</td>
+            <td>100.0</td>
+            <td>Y</td>
+            <td>365</td>
+            <td>365</td>
+            <td>0</td>
+            <td>1</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>0.315139</td>
+            <td>0.424056</td>
+            <td>1.470</td>
+            <td>2009-06-02 11:00:00+00:00</td>
+            <td>1.440</td>
+            <td>2009-04-24 11:00:00+00:00</td>
+            <td>1.440</td>
+            <td>2009-05-19 10:00:00+00:00</td>
+            <td>1.430</td>
+            <td>2009-05-27 11:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>1.350</td>
+            <td>1.310</td>
+            <td>1.200</td>
+            <td>1.040</td>
+            <td>0.630</td>
+            <td>0.010</td>
+            <td>0.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>97</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>81102</td>
+            <td>4</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>PM10 Total 0-10um STP</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL-R&amp;P SA246B-INLET - TEOM-GRAVIMETRIC</td>
+            <td>2007</td>
+            <td>Micrograms/cubic meter (25 C)</td>
+            <td>Events Included</td>
+            <td>8049</td>
+            <td>92.0</td>
+            <td>Y</td>
+            <td>332</td>
+            <td>365</td>
+            <td>8049</td>
+            <td>666</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>24.842341</td>
+            <td>27.272133</td>
+            <td>698.000</td>
+            <td>2007-09-27 07:00:00+00:00</td>
+            <td>404.000</td>
+            <td>2007-07-11 04:00:00+00:00</td>
+            <td>397.000</td>
+            <td>2007-10-04 12:00:00+00:00</td>
+            <td>361.000</td>
+            <td>2007-09-26 14:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>135.000</td>
+            <td>99.000</td>
+            <td>68.000</td>
+            <td>49.000</td>
+            <td>29.000</td>
+            <td>18.000</td>
+            <td>6.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2021-03-12</td>
+            </tr>
+            <tr>
+            <th>98</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>64101</td>
+            <td>1</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>Barometric pressure</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL - ANEROID</td>
+            <td>2011</td>
+            <td>Millibars</td>
+            <td>No Events</td>
+            <td>8559</td>
+            <td>98.0</td>
+            <td>Y</td>
+            <td>355</td>
+            <td>365</td>
+            <td>0</td>
+            <td>15</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>874.505667</td>
+            <td>5.890858</td>
+            <td>894.000</td>
+            <td>2011-12-23 06:00:00+00:00</td>
+            <td>893.000</td>
+            <td>2011-12-23 07:00:00+00:00</td>
+            <td>893.000</td>
+            <td>2011-12-23 08:00:00+00:00</td>
+            <td>892.000</td>
+            <td>2011-12-22 23:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>888.000</td>
+            <td>886.000</td>
+            <td>884.000</td>
+            <td>882.000</td>
+            <td>879.000</td>
+            <td>874.000</td>
+            <td>867.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+            <tr>
+            <th>99</th>
+            <td>6</td>
+            <td>27</td>
+            <td>1023</td>
+            <td>85101</td>
+            <td>4</td>
+            <td>37.362137</td>
+            <td>-118.417478</td>
+            <td>WGS84</td>
+            <td>PM10 - LC</td>
+            <td>1 HOUR</td>
+            <td>NaN</td>
+            <td>Observed Values</td>
+            <td>INSTRUMENTAL-R&amp;P SA246B-INLET - TEOM-GRAVIMETRIC</td>
+            <td>2016</td>
+            <td>Micrograms/cubic meter (LC)</td>
+            <td>Events Included</td>
+            <td>8469</td>
+            <td>96.0</td>
+            <td>Y</td>
+            <td>349</td>
+            <td>366</td>
+            <td>8469</td>
+            <td>307</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>Certification not required</td>
+            <td>0</td>
+            <td>20.753572</td>
+            <td>17.117252</td>
+            <td>388.000</td>
+            <td>2016-12-15 04:00:00+00:00</td>
+            <td>321.000</td>
+            <td>2016-07-29 15:00:00+00:00</td>
+            <td>245.000</td>
+            <td>2016-12-15 05:00:00+00:00</td>
+            <td>219.000</td>
+            <td>2016-10-23 17:00:00+00:00</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>NaN</td>
+            <td>80.000</td>
+            <td>66.000</td>
+            <td>49.000</td>
+            <td>39.000</td>
+            <td>26.000</td>
+            <td>17.000</td>
+            <td>6.000</td>
+            <td>Bishop Tribe EMO</td>
+            <td>50 TU SU LANE</td>
+            <td>California</td>
+            <td>Inyo</td>
+            <td>Bishop</td>
+            <td>Bishop, CA</td>
+            <td>2020-05-21</td>
+            </tr>
+        </tbody>
+        </table>
+</body>
+</html>
