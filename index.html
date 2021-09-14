@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Fire Analysis Project</title>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-        
 </head>
+
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Fire Analysis Project</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="./Pages/visualizations_page.html">Visualizations</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="./Pages/air_table.html">Air Data</a>
-                    <a class="dropdown-item" href="./Pages/fire_table.html">Fire Data</a>
-                </div>
-            </li>
-        </ul>
+        <div class = "rounded float-end">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="./Pages/visualizations_page.html">Visualizations</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="./Pages/air_table.html">Air Data</a>
+                        <a class="dropdown-item" href="./Pages/fire_table.html">Fire Data</a>
+                    </div>
+                </li>
+                </ul>
+            </div>
         </div>
     </div>
 </nav>
 
-<div class = "text-center">
-<img src ="https://media.istockphoto.com/photos/texture-of-fire-on-a-black-background-picture-id851824664?k=6&m=851824664&s=170667a&w=0&h=zQo-wqrdWcidWKgL0Wp3ESOyqgjlqN5-VIQfpvLBfRY=" class="img-fluid">
+<div class = "container-fluid my-image bg-black">
+    <center>
+        <img src ="https://media.istockphoto.com/photos/texture-of-fire-on-a-black-background-picture-id851824664?k=6&m=851824664&s=170667a&w=0&h=zQo-wqrdWcidWKgL0Wp3ESOyqgjlqN5-VIQfpvLBfRY=" class="img-responsive center-block" style = "width: 1300px; height: 180px">
+    </center>
 </div>
+    <div class= "container-fluid m-5">
     <h1>Summary:</h1>
-
-    <p>
+    
+    <p style="text-indent: 40px">
         The Fire Analysis Project was a homework assignment for the U.C. Davis Data Anlalytics Certificate Program. This project is the product of the colaboration of
         <a href="https://github.com/Jagjeet">Jagjeet Khalsa</a>,
         Robert Ward,
@@ -69,6 +75,9 @@
         To see original project, please click link 
         <a href="https://github.com/Jagjeet/fire-analysis-project">here</a>.
     </p>
+    </div>
 
-        
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>       
 </html>
+
