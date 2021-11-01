@@ -51,39 +51,76 @@
         <img src ="https://media.istockphoto.com/photos/texture-of-fire-on-a-black-background-picture-id851824664?k=6&m=851824664&s=170667a&w=0&h=zQo-wqrdWcidWKgL0Wp3ESOyqgjlqN5-VIQfpvLBfRY=" class="img-responsive center-block" style = "width: 1300px; height: 180px">
     </center>
 </div>
-    <div class= "m-5">
-    <h1>Summary:</h1>
+<div class="row">
+    <div class="col-md-8">
+        <div class= "m-5">
+        <h1>Summary:</h1>
 
-    
-    <p style="text-indent: 40px">
-        The Fire Analysis Project was a homework assignment for the U.C. Davis Data Anlalytics Certificate Program. This project was the product of the colaboration of
-        <a href="https://github.com/Jagjeet">Jagjeet Khalsa</a>,
-        Robert Ward,
-        <a href="https://github.com/ParasAlex">Alex Paras</a>,
-        and of course myself
-        (<a href="https://github.com/J-Schea29">Jon Scheaffer</a>).
-        The goal of this project was to anlyze
-        <a href="https://www.kaggle.com/rtatman/188-million-us-wildfires">188-million-us-wildfires</a>
-        with respect to
-        <a href="https://www.kaggle.com/epa/epa-historical-air-quality">epa-historical-air-quality</a>.
-        Both of these sources are from
-        <a href="https://www.kaggle.com/">Kaggle</a>.
-    </p>
-    <p>
         
-        Some of the aspects of the data we wanted to explore are:
-    </p>
-    <ol>
-        <li>Comparing national fire data with California fire data</li>
-        <li>Comparing Californa fire data with California annual air quality data</li>
-        <li>Looking at the correlation of counties with worse air quality and fires</li>
-        <li>Projecting fires (count, counties most impacted, etc.) for the future</li>
-    </ol>
-    <p>
-        To see original project, please click link 
-        <a href="https://github.com/Jagjeet/fire-analysis-project">here</a>.
-    </p>
+        <p style="text-indent: 40px">
+            The Fire Analysis Project was a homework assignment for the U.C. Davis Data Anlalytics Certificate Program. This project was the product of the colaboration of
+            <a href="https://github.com/Jagjeet">Jagjeet Khalsa</a>,
+            Robert Ward,
+            <a href="https://github.com/ParasAlex">Alex Paras</a>,
+            and of course myself
+            (<a href="https://github.com/J-Schea29">Jon Scheaffer</a>).
+            The goal of this project was to anlyze
+            <a href="https://www.kaggle.com/rtatman/188-million-us-wildfires">188-million-us-wildfires</a>
+            with respect to
+            <a href="https://www.kaggle.com/epa/epa-historical-air-quality">epa-historical-air-quality</a>.
+            Both of these sources are from
+            <a href="https://www.kaggle.com/">Kaggle</a>.
+        </p>
+        <p>
+            
+            Some of the aspects of the data we wanted to explore are:
+        </p>
+        <ol>
+            <li>Comparing national fire data with California fire data</li>
+            <li>Comparing Californa fire data with California annual air quality data</li>
+            <li>Looking at the correlation of counties with worse air quality and fires</li>
+            <li>Projecting fires (count, counties most impacted, etc.) for the future</li>
+        </ol>
+        <p>
+            To see original project, please click link 
+            <a href="https://github.com/Jagjeet/fire-analysis-project">here</a>.
+        </p>
+        </div>
     </div>
+    <div class="col-md-4" style = "border: 1px solid grey;">
+        <h4 class = "text-center">
+            Visualizations
+        </h4>
+        <br>
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6">
+                <a href="NatNumb.html"><img src="visualizations/CalNumFire.png" alt="1" style="width:100%; height:70%;" class="img-responsive"/></a>  
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">   
+                <a href="CalNumb.html"><img src="visualizations/CA_YearVsNumberOfFires-Trend.png" alt="1" style="width:100%; height:70%;" class="img-responsive"/></a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6"> 
+                <a href="NatFireSize.html"><img src="visualizations/National_YearVsAverageFireSize-Trend.png" alt="1" style="width:100%; height:70%;" class="img-responsive"/></a>  
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">  
+                <a href="CalFireSize.html"><img src="visualizations/CA_YearVsAverageFireSize-Trend.png" alt="1" style="width:100%; height:70%;" class="img-responsive"/></a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6"> 
+                <a href="FireMap.html"><img src="visualizations/fire heat map.png" alt="1" style="width:100%; height:70%;" class="img-responsive"/></a>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">  
+                <a href="AirMap.html"><img src="visualizations/air heatmap.png" alt="1" style="width:100%; height:70%;" class="img-responsive"/></a>
+            </div>
+        </div>
+    
+    </div>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
